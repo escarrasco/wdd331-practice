@@ -8,12 +8,12 @@
     /* Colors: at least primary, background, text, accent */
     --color-primary: #E76F51;  
     --color-primary-hover: #E9C46A;
-    --color-background: #f8f8f8;
-    --color-surface: #ffffff;
-    --color-text: #264653;
-    --color-text-muted:#2A9D8F;
-    --color-accent: #F4A261;
-    --color-border: #2A9D8F;
+    --color-background: #264653;
+    --color-surface: #2A9D8F;
+    --color-text: #f8f8f8;
+    --color-text-muted:#fff;
+    --color-accent: #264653;
+    --color-border: #E9C46A;
     /* Spacing: at least sm, md, lg */
     --space-sm: 0.5rem;
     --space-md: 1rem;
