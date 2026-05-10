@@ -1,0 +1,79 @@
+/* Card components: .card-group, .cards grid, .card, .card-tag, .card-footer
+   Use native nesting. Reference tokens with var(). */
+
+/* TODO: Style the card components */
+
+.card-group{
+   margin-bottom: var(--space-xl);
+}
+
+.cards{
+   display: grid;
+   grid-template-columns: repeat(
+      auto-fill,
+      minmax(clamp(14rem, 30%, 22rem), 1fr)
+   );
+   gap: clamp(var(--space-md), 2vw, var(--space-lg));
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.card{
+   display: flex;
+   flex-direction: column;
+   background-color: var(--color-surface);
+   border-radius: var(--radius-md);
+   border: 1px solid var(--color-border);
+   box-shadow: var(--shadow-sm);
+   padding: var(--space-md);
+   transition:
+      box-shadow var(--transition-fast),
+      transform var(--transition-fast);
+   &:hover{
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+   }
+
+   h3{
+      font-family: var(--font-heading);
+      font-size: calc(var(--font-size-base) * 1.25);
+      color: var(--color-text);
+      margin-bottom: var(--space-xs);
+   }
+   
+   p{
+      color: var(--color-text-muted);
+      font-size: var(--font-size-base);
+      line-height: var(--line-height-body);
+
+      flex-grow: 1;
+      margin-bottom: var(--space-sm);
+   }
+}
+
+.card-tag{
+   display: inline-block;
+   background-color: var(--color-status-open-bg);
+   color: var(--color-status-open);
+   font-size: calc(var(--font-size-base) * 0.7);
+   font-weight: var(--font-weight-bold);
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+
+   padding: var(--space-xs) var(--space-sm);
+   border-radius: var(--radius-lg);
+
+   margin-bottom: var(--space-sm);
+}
+
+.card-footer{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-top: 1px solid var(--color-border);
+   padding-top: var(--space-sm);
+   margin-top: auto;
+   font-size: calc(var(--font-size-base) * 0.7);
+   color: var(--color-text-muted);
+}

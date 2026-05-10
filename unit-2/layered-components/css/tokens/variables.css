@@ -1,0 +1,37 @@
+/* Non-color tokens: spacing, typography, borders, shadows.
+   These values should be referenced by every other layer. */
+:root {
+    /* TODO: Define spacing, font, radius, and shadow tokens here */
+    /*spacing*/
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /*typography*/
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Verdana', sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --font-size-base: 1rem;
+    --font-size-hero: clamp(1.75rem, 4vw + 1rem, 3.25rem);
+    --font-size-section: clamp(1.25rem, 2vw + 0.5rem, 2rem);
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --line-height-body: 1.7;
+    --line-height-heading: 1.25;
+    
+    /*borders*/
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 2rem;
+
+    /*shadows*/
+    --shadow-sm: 0 1px 4px rgba(44, 36, 22, 0.08);
+    --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.14);
+    --focus-ring: 2px solid var(--color-primary);
+    --focus-ring-offset: 2px;
+
+    /*transition*/
+    --transition-fast: 150ms ease;
+}
