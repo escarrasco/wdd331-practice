@@ -1,0 +1,18 @@
+
+:root {
+    /* TODO: Define color tokens here */
+    --color-primary: #dda15e;
+    --color-background: #f7f3ee;
+    --color-text: #283618;
+    --color-accent: #bc6c25;
+    --color-surface: #fffdf9;
+    --color-border: #d9cfc3;
+    --color-text-muted: #7a6a56;
+    --color-primary-hover: #9a6b2a;
+    --color-nav-bg: #283618;
+    --color-nav-text: #f7f3ee;
+    --color-status-open: #606c38;
+    --color-status-open-bg: #e6f4ea;
+    --color-status-construction: #8a5a00;
+    --color-status-construction-bg: #fff3cd;
+}
