@@ -31,7 +31,7 @@ css/
 ├── components/
 │   └── card.css          # Assignment card component
 ├── layout/
-│   └── page.css          # Page wrapper, header, grid, footer
+│   └── primary.css       # Page wrapper, header, grid, footer
 ├── tokens/
 │   ├── colors.css        # Color custom properties
 │   └── variables.css     # Spacing, typography, radius, shadow tokens
