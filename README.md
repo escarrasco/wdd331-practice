@@ -16,7 +16,7 @@ every push to main.
 - [Home](index.html)
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
-
+- [@custom-media Demo for the teaching video](unit-2/custom-media-demo/index.html)
 ---
 
 ## CSS Architecture
