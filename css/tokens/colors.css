@@ -1,18 +1,16 @@
-
 :root {
-    /* TODO: Define color tokens here */
-    --color-primary: #dda15e;
-    --color-background: #f7f3ee;
-    --color-text: #283618;
-    --color-accent: #bc6c25;
-    --color-surface: #fffdf9;
-    --color-border: #d9cfc3;
-    --color-text-muted: #7a6a56;
-    --color-primary-hover: #9a6b2a;
-    --color-nav-bg: #283618;
-    --color-nav-text: #f7f3ee;
-    --color-status-open: #606c38;
-    --color-status-open-bg: #e6f4ea;
-    --color-status-construction: #8a5a00;
-    --color-status-construction-bg: #fff3cd;
+    --color-primary: #ffffff;
+    --color-primary-hover: #f0e0f0;
+    --color-background: #2f2235;
+    --color-surface: #2f2235;
+    --color-accent: #b49bbf;
+    --color-border: #b49bbf;
+    --color-text: #ffffff;
+    --color-text-muted: #f3d5f5;
+    --color-nav-bg: #BFC3BA;
+    --color-nav-text: #ffffff;
+    --color-status-open: #ffffff;
+    --color-status-open-bg: #60495A;
+    --color-status-construction: #ffffff;
+    --color-status-construction-bg: #3F3244;
 }
