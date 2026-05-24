@@ -11,6 +11,9 @@ Each week I add new pages and styles as I work through the course
 assignments. The site deploys automatically to GitHub Pages on
 every push to main.
 
+The site supports **light and dark mode** automatically via `prefers-color-scheme`,
+with a manual theme toggle to override the system preference.
+
 ## Pages
 
 - [Home](index.html)
@@ -30,10 +33,14 @@ css/
 │   └── reset.css         # Box-sizing, margin/padding reset
 ├── components/
 │   └── card.css          # Assignment card component
+|   └── theme-toggle.css  # Disclosure widget with three radio options: light, system, and dark
 ├── layout/
 │   └── primary.css       # Page wrapper, header, grid, footer
 ├── tokens/
 │   ├── colors.css        # Color custom properties
+    |                     # Seed + semantic color tokens with light-dark support.
+│   │                     # Seeds define raw brand colors. 
+│   │                     # Semantic tokens switch automatically between light and dark values.
 │   └── variables.css     # Spacing, typography, radius, shadow tokens
 ├── utilities/
 │   └── utilities.css     # Helper classes (sr-only, text-align)
