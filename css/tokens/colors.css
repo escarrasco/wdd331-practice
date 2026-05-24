@@ -1,16 +1,82 @@
 :root {
-    --color-primary: #ffffff;
-    --color-primary-hover: #f0e0f0;
-    --color-background: #2f2235;
-    --color-surface: #2f2235;
-    --color-accent: #b49bbf;
-    --color-border: #b49bbf;
-    --color-text: #ffffff;
-    --color-text-muted: #f3d5f5;
-    --color-nav-bg: #BFC3BA;
+    color-scheme: light;
+
+    /* ---- Seeds ---- */
+    --seed-bg: #f4f0f8;
+    --seed-surface: #ffffff;
+    --seed-text: #2f2235;
+    --seed-text-muted: #60495A;
+    --seed-accent: oklch(0.45 0.14 300);
+    --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --seed-link: var(--seed-accent);
+    --seed-link-hover: var(--seed-accent-hover);
+    --seed-border: #d8c8e0;
+    --seed-border-strong: #b49bbf;
+
+    /* ---- Accent ramp ---- */
+    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
+    --accent-500: var(--seed-accent);
+    --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
+    --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
+}
+
+/* ---- Switching ---- */
+
+/* User chose dark */
+html:has(input[name='theme-preference'][value='dark']:checked) {
+    color-scheme: dark;
+}
+
+/* User chose system and OS is dark */
+@media (prefers-color-scheme: dark) {
+    html:has(input[name='theme-preference'][value='system']:checked) {
+        color-scheme: dark;
+    }
+}
+
+
+:root,
+html {
+    /* ---- Semantic tokens ---- */    
+    --color-bg:           light-dark(var(--seed-bg),           oklch(0.15 0.04 300));
+    --color-surface:      light-dark(var(--seed-surface),      oklch(0.19 0.05 300));
+    --color-text:         light-dark(var(--seed-text),         oklch(0.92 0.02 300));
+    --color-text-muted:   light-dark(var(--seed-text-muted),   oklch(0.85 0.04 300));
+    --color-accent:       light-dark(var(--seed-accent),       oklch(0.62 0.14 300));
+    --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.16 300));
+    --color-link:         light-dark(var(--seed-link),         oklch(0.65 0.14 300));
+    --color-link-hover:   light-dark(var(--seed-link-hover),   oklch(0.72 0.16 300));
+    --color-border:       light-dark(var(--seed-border),       oklch(0.30 0.05 300));
+    --color-border-strong:light-dark(var(--seed-border-strong),oklch(0.36 0.06 300));
+
+    /* Tint the native checkboxes, radios, and range sliders */
+    accent-color: var(--color-accent);
+
+    /* ---- Header chrome ---- */
+    --header-bg: var(--color-accent);
+    --header-text: light-dark(#ffffff, #f0eaf8);
+
+    /* ---- Theme toggle (consumed by theme-toggle.css) ---- */
+    --theme-toggle-bg:           color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
+    --theme-toggle-border:       color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
+    --theme-toggle-bg-hover:     color-mix(in srgb, var(--header-text) 30%, var(--header-bg));
+    --theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
+
+    /* ---- Shadows ---- */
+    --shadow-color: light-dark(rgb(47 34 53 / 0.10), rgb(0 0 0 / 0.30));
+    --shadow-sm:    0 1px 2px 0 var(--shadow-color);
+    --shadow-md:    0 1px 3px 0 var(--shadow-color);
+
+    /* ---- Status badges --- */
+    --color-status-open:              #ffffff;
+    --color-status-open-bg:           oklch(0.42 0.10 300);
+    --color-status-construction:      #ffffff;
+    --color-status-construction-bg:   oklch(0.30 0.08 300);
+
+    /* ---- Nav ---- */
+    --color-nav-bg:   oklch(0.35 0.09 300);
     --color-nav-text: #ffffff;
-    --color-status-open: #ffffff;
-    --color-status-open-bg: #60495A;
-    --color-status-construction: #ffffff;
-    --color-status-construction-bg: #3F3244;
 }

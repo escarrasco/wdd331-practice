@@ -2,12 +2,19 @@
    These values should be referenced by every other layer. */
 :root {
     /* TODO: Define spacing, font, radius, and shadow tokens here */
-    /*spacing*/
+    /*old space
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
+    */
+    /* Unit3 part A New Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
 
     /*typography*/
     --font-heading: 'Georgia', serif;
@@ -20,6 +27,13 @@
     --font-weight-bold: 700;
     --line-height-body: 1.7;
     --line-height-heading: 1.25;
+    
+    /*unit3 part A typography*/
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: monospace;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
     
     /*borders*/
     --radius-sm: 0.25rem;
@@ -34,4 +48,17 @@
 
     /*transition*/
     --transition-fast: 150ms ease;
+
+    /*unit 3 part A*/
+    /* Radii */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    /* Transitions */
+    --transition-base: 0.2s ease;
+    /* Icons */
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+    /* Focus */
+    --outline-width: 2px;
 }
