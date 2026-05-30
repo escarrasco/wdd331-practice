@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Visual Effects – Unit 3</title>
+    <script src="../js/theme-preference.js"></script>
+	<link rel="stylesheet" type="text/css" href="../dist/styles.css">
+
+</head>
+<body>
+    <details class="theme-menu">
+        <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+            <label class="theme-control theme-pick" data-theme-pick="light">
+                <input name="theme-preference" type="radio" value="light">
+                <span aria-hidden="true">&#9788;&#65039;</span>
+                <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+                <input name="theme-preference" type="radio" value="system" checked>
+                <span aria-hidden="true">&#9881;&#65039;</span>
+                <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+                <input name="theme-preference" type="radio" value="dark">
+                <span aria-hidden="true">&#127766;</span>
+                <span class="visually-hidden">Dark</span>
+            </label>
+        </div>
+    </details>
+    <nav class="site-nav">
+        <a href="../../index.html">&larr; Home</a>
+        <ul>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#" aria-current="page">Effects</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO: Use a gradient overlay and text-shadow for depth -->
+    <header class="hero">
+        <img
+            class="hero-image"
+            src="https://picsum.photos/seed/hero-effects/1200/500"
+            alt="Landscape placeholder for hero section"
+        >
+        <div class="hero-content">
+            <h1>Visual Effects Showcase</h1>
+            <p>Shadows, gradients, and filters working together.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- CARDS: Elevation shadows, hover transitions -->
+        <section class="card-section">
+            <h2>Elevation Cards</h2>
+            <div class="cards">
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-1/400/250"
+                        alt="Placeholder image"
+                    >
+                    <!-- Replace placeholder images with your own if you prefer -->
+                    <div class="card-body">
+                        <h3>Layered Shadows</h3>
+                        <p>
+                            Multiple shadow layers create realistic depth
+                            that changes on hover.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-2/400/250"
+                        alt="Placeholder image"
+                    >
+                    <div class="card-body">
+                        <h3>Gradient Surfaces</h3>
+                        <p>
+                            A subtle gradient on the card background adds
+                            dimension without distracting from content.
+                        </p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img
+                        class="card-image"
+                        src="https://picsum.photos/seed/card-3/400/250"
+                        alt="Placeholder image"
+                    >
+                    <div class="card-body">
+                        <h3>Filtered Images</h3>
+                        <p>
+                            A grayscale or sepia filter on the image that
+                            lifts on hover draws attention to active cards.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- GLASS PANEL: backdrop-filter for frosted glass -->
+        <section class="glass-section">
+            <div class="glass-background">
+                <img
+                    src="https://picsum.photos/seed/glass-bg/1200/400"
+                    alt="Background image behind glass panel"
+                    class="glass-bg-image"
+                >
+            </div>
+            <div class="glass-panel">
+                <h2>Frosted Glass</h2>
+                <p>
+                    This panel uses backdrop-filter to blur and saturate the
+                    image behind it. The text stays sharp while the background
+                    softens into a frosted surface.
+                </p>
+            </div>
+        </section>
+
+        <!-- ICON ROW: drop-shadow on transparent images -->
+        <section class="icon-section">
+            <h2>Drop Shadow on Transparent Images</h2>
+            <p>
+                These icons use drop-shadow() instead of box-shadow so the shadow
+                follows the actual shape of each image rather than its bounding box.
+            </p>
+            <div class="icon-row">
+                <!-- Replace these with your own transparent PNGs or SVGs -->
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/heart.svg" alt="Heart icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/star.svg" alt="Star icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/bookmark.svg" alt="Bookmark icon">
+                <img class="icon-item" src="https://cdn.jsdelivr.net/npm/@tabler/icons@2.47.0/icons/message-circle.svg" alt="Message icon">
+            </div>
+        </section>
+
+        <!-- CHOOSE TOPIC: Blend modes and shape outside -->
+        <section class="blend-section">
+            <h2>Blend Modes &amp; Shape-Outside</h2>
+            <p>
+                The circular image uses <code>shape-outside: circle(50%)</code> so the
+                paragraph text wraps its curved edge. A <code>mix-blend-mode: multiply</code>
+                overlay tints the photo with the accent colour; hover to reveal the original.
+                The colour-wash strip below demonstrates <code>mix-blend-mode: soft-light</code>.
+            </p>
+ 
+            <div class="blend-article">
+                <div class="blend-float">
+                    <img
+                        src="https://picsum.photos/seed/blend-float/400/400"
+                        alt="Circular image with blend-mode colour overlay"
+                    >
+                </div>
+                <p>
+                    When <code>shape-outside</code> is applied to a floated element, the browser
+                    calculates the inline flow of surrounding text around the geometric shape
+                    rather than the element's rectangular bounding box. Here the float is a
+                    perfect circle, so the paragraphs hug its curved edge naturally.
+                </p>
+                <p>
+                    The accent-coloured overlay uses <code>mix-blend-mode: multiply</code>,
+                    which darkens where the overlay and the image overlap — deep shadows in
+                    the photo become richer, while highlights retain brightness. Hover over
+                    the circle to toggle the overlay off and see the original image underneath.
+                </p>
+                <p>
+                    Blend modes work best when paired with semi-transparent colours. The
+                    <code>opacity: 0.45</code> on the overlay keeps the tint subtle enough
+                    that the photo remains legible while the colour theme still comes through.
+                    In dark mode the same rule applies because the overlay is driven by
+                    <code>var(--color-accent)</code>, which already adapts via
+                    <code>light-dark()</code>.
+                </p>
+            </div>
+ 
+            <!-- Soft-light blend-mode colour-wash strip -->
+            <div class="blend-strip">
+                <img
+                    class="blend-strip-image"
+                    src="https://picsum.photos/seed/blend-strip/1200/140"
+                    alt="Colour-wash demonstration strip"
+                >
+                <div class="blend-strip-overlay"></div>
+                <div class="blend-strip-label">soft-light colour wash</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 My Practice Site</p>
+    </footer>
+</body>
+</html>
