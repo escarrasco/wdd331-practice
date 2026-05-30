@@ -43,6 +43,18 @@
     /*shadows*/
     --shadow-sm: 0 1px 4px rgba(44, 36, 22, 0.08);
     --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.14);
+    /*for unit 3 visual effects*/
+    /*two-layer stacks*/
+    --shadow-card:   0 1px 3px var(--shadow-color),
+                     0 4px 12px var(--shadow-color);
+ 
+    --shadow-raised: 0 4px 8px var(--shadow-color),
+                     0 12px 28px var(--shadow-color);
+ 
+    /*For the glass panel*/
+    --shadow-glass:  0 8px 32px oklch(0 0 0 / 0.22);
+
+
     --focus-ring: 2px solid var(--color-primary);
     --focus-ring-offset: 2px;
 
