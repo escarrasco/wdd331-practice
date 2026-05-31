@@ -50,3 +50,23 @@
         }
     }
 }
+.site-nav .theme-menu {
+    margin-inline-start: auto;
+}
+
+@media (max-width: 480px) {
+    .site-nav {
+        flex-wrap: wrap;
+
+        & ul {
+            order: 3;
+            width: 100%;
+            padding-block-start: var(--spacing-xs);
+            border-top: 1px solid color-mix(in srgb, var(--color-nav-text) 20%, transparent);
+        }
+
+        & .theme-menu {
+            order: 2;
+        }
+    }
+}
