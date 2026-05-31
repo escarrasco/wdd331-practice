@@ -20,6 +20,7 @@ with a manual theme toggle to override the system preference.
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
 - [@custom-media Demo for the teaching video](unit-2/custom-media-demo/index.html)
+- [Visual Effects](unit-3/visual-effects/index.html)
 ---
 
 ## CSS Architecture
