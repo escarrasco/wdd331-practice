@@ -1,54 +1,95 @@
-/* Navigation component: .site-nav and its links
-   Style the active link using aria-current. */
+.site-nav {
+    background-color: var(--color-nav-bg);
+    padding-block: var(--spacing-sm);
+    padding-inline: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
 
-/* TODO: Style the navigation */
+    /* home link stays left, toggle is pushed to the right */
+    & .site-nav__home {
+        color: var(--color-nav-text);
+        text-decoration: none;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.04em;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast);
 
-.site-nav{
-   background-color: var(--color-nav-bg);
-   padding-block: var(--spacing-sm);
-   padding-inline: var(--spacing-md);
-
-   display: flex;
-   align-items: center;
-   gap: var(--spacing-lg);
-
-   ul{
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-md);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-   }
-
-   a{
-      color: var(--color-nav-text);
-      text-decoration: none;
-      font-size: var(--font-size-base);
-      font-weight: var(--font-weight-bold);
-      letter-spacing: 0.04em;
-      padding: var(--spacing-xs) var(--spacing-sm);
-      border-radius: var(--radius-sm);
-      transition:
-         background-color var(--transition-fast),
-         color var(--transition-fast);
-
-         &[aria-current="page"]{
-            background-color: var(--color-primary);
-            color: var(--color-surface);
-         }
-
-         &:not([aria-current="page"]):hover{
+        &:hover {
             background-color: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
-         }
+        }
 
-         &:focus-visible{
+        &:focus-visible {
             outline: var(--focus-ring);
             outline-offset: var(--focus-ring-offset);
-         }
+        }
+    }
 
-         &:focus:not(:focus-visible){
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    & a {
+        color: var(--color-nav-text);
+        text-decoration: none;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.04em;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-sm);
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast);
+
+        &[aria-current="page"] {
+            background-color: var(--color-accent);
+            color: #ffffff;
+        }
+
+        &:not([aria-current="page"]):hover {
+            background-color: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
+        }
+
+        &:focus-visible {
+            outline: var(--focus-ring);
+            outline-offset: var(--focus-ring-offset);
+        }
+
+        &:focus:not(:focus-visible) {
             outline: none;
-         }
-   }
+        }
+    }
+
+    /* push the theme toggle to the far right */
+    & .theme-menu {
+        margin-inline-start: auto;
+    }
+}
+
+/* responsive: stack links below home on small screens */
+@media (max-width: 480px) {
+    .site-nav {
+        & ul {
+            order: 3;
+            width: 100%;
+            padding-block-start: var(--spacing-xs);
+            border-top: 1px solid color-mix(in srgb, var(--color-nav-text) 20%, transparent);
+        }
+
+        & .theme-menu {
+            order: 2;
+        }
+    }
 }
