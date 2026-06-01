@@ -1,7 +1,8 @@
 {
   "name": "custom-media-demo",
   "scripts": {
-    "build": "postcss css/style.css -o dist/style.css"
+    "build": "postcss css/style.css -o dist/style.css",
+    "watch": "postcss css/style.css -o dist/style.css --watch"
   },
   "devDependencies": {
     "postcss": "^8.4.38",
