@@ -1,3 +1,7 @@
+.main{
+    padding: var(--spacing-lg);
+}
+
 .page-wrapper {
     max-width: 960px;
     margin: 0 auto;
