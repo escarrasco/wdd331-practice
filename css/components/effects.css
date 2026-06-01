@@ -322,6 +322,7 @@ html:has(input[value="dark"]:checked) .hero::after {
     overflow: hidden;
     height: 140px;
     isolation: isolate;
+    /*background: linear-gradient(90deg, #2a4a7f, #7b3f8c); */
 }
 .blend-strip-image {
     width: 100%;
@@ -337,7 +338,7 @@ html:has(input[value="dark"]:checked) .hero::after {
         oklch(0.45 0.14 300 / 0.70),
         oklch(0.60 0.16 260 / 0.60)
     );
-    mix-blend-mode: multiply;
+    mix-blend-mode: soft-light;
     pointer-events: none;
 }
 
