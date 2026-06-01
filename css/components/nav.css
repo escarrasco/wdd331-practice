@@ -5,17 +5,17 @@
 
 .site-nav{
    background-color: var(--color-nav-bg);
-   padding-block: var(--space-sm);
-   padding-inline: var(--space-md);
+   padding-block: var(--spacing-sm);
+   padding-inline: var(--spacing-md);
 
    display: flex;
    align-items: center;
-   gap: var(--space-lg);
+   gap: var(--spacing-lg);
 
    ul{
       display: flex;
       align-items: center;
-      gap: var(--space-md);
+      gap: var(--spacing-md);
       list-style: none;
       margin: 0;
       padding: 0;
@@ -27,7 +27,7 @@
       font-size: var(--font-size-base);
       font-weight: var(--font-weight-bold);
       letter-spacing: 0.04em;
-      padding: var(--space-xs) var(--space-sm);
+      padding: var(--spacing-xs) var(--spacing-sm);
       border-radius: var(--radius-sm);
       transition:
          background-color var(--transition-fast),
