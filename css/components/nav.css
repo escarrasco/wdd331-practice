@@ -1,126 +1,54 @@
-.site-nav {
-    background-color: var(--color-nav-bg);
-    padding-block: var(--spacing-sm);
-    padding-inline: var(--spacing-md);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
+/* Navigation component: .site-nav and its links
+   Style the active link using aria-current. */
 
-    & ul {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-md);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+/* TODO: Style the navigation */
 
-    & a {
-        color: var(--color-nav-text);
-        text-decoration: none;
-        font-size: var(--font-size-base);
-        font-weight: var(--font-weight-bold);
-        letter-spacing: 0.04em;
-        padding: var(--spacing-xs) var(--spacing-sm);
-        border-radius: var(--radius-sm);
-        transition:
-            background-color var(--transition-fast),
-            color var(--transition-fast);
+.site-nav{
+   background-color: var(--color-nav-bg);
+   padding-block: var(--space-sm);
+   padding-inline: var(--space-md);
 
-        &[aria-current="page"] {
-            background-color: var(--color-accent);
-            color: #ffffff;
-        }
+   display: flex;
+   align-items: center;
+   gap: var(--space-lg);
 
-        &:not([aria-current="page"]):hover {
+   ul{
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   a{
+      color: var(--color-nav-text);
+      text-decoration: none;
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.04em;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      transition:
+         background-color var(--transition-fast),
+         color var(--transition-fast);
+
+         &[aria-current="page"]{
+            background-color: var(--color-primary);
+            color: var(--color-surface);
+         }
+
+         &:not([aria-current="page"]):hover{
             background-color: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
-        }
+         }
 
-        &:focus-visible {
+         &:focus-visible{
             outline: var(--focus-ring);
             outline-offset: var(--focus-ring-offset);
-        }
+         }
 
-        &:focus:not(:focus-visible) {
+         &:focus:not(:focus-visible){
             outline: none;
-        }
-    }
-
-    & .theme-menu {
-        margin-inline-start: auto;
-    }
-}
-
-/* Hamburger button — hidden on desktop */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-xs);
-
-    & span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background-color: var(--color-nav-text);
-        border-radius: 2px;
-        transition: transform var(--transition-fast), opacity var(--transition-fast);
-    }
-}
-
-.nav-toggle[aria-expanded="true"] {
-    & span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    & span:nth-child(2) { opacity: 0; }
-    & span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .site-nav {
-        flex-wrap: wrap;
-        gap: var(--spacing-sm);
-
-        & .theme-menu {
-            margin-inline-start: auto;
-            order: 2;
-        }
-    }
-
-    .nav-toggle {
-        display: flex;
-        order: 2;
-        margin-inline-start: auto;
-    }
-
-    .site-nav .theme-menu {
-        margin-inline-start: 0;
-        order: 3;
-    }
-
-    .nav-menu {
-        display: none;
-        order: 4;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        padding-block: var(--spacing-xs);
-        border-top: 1px solid color-mix(in srgb, var(--color-nav-text) 20%, transparent);
-
-        & li { width: 100%; }
-
-        & a {
-            display: block;
-            width: 100%;
-            padding: var(--spacing-sm);
-        }
-    }
-
-    .nav-menu.is-open {
-        display: flex;
-    }
+         }
+   }
 }
