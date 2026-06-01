@@ -264,7 +264,7 @@ html:has(input[value="dark"]:checked) .hero::after {
 }
 .blend-section > p {
     color: var(--color-text-muted);
-    max-width: 60ch;
+    /*max-width: 60ch;*/
     margin-block-end: var(--spacing-lg);
     line-height: var(--line-height-body);
 }
