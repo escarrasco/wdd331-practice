@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS shape-outside — Demo</title>
+  <script src="js/theme-preference.js"></script>
+  <!-- Project tokens -->
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <!-- Demo styles -->
+  <link rel="stylesheet" href="css/shape-outside.css">
+</head>
+<body>
+  <details class="theme-menu">
+        <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+            <label class="theme-control theme-pick" data-theme-pick="light">
+                <input name="theme-preference" type="radio" value="light">
+                <span aria-hidden="true">&#9788;&#65039;</span>
+                <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+                <input name="theme-preference" type="radio" value="system" checked>
+                <span aria-hidden="true">&#9881;&#65039;</span>
+                <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+                <input name="theme-preference" type="radio" value="dark">
+                <span aria-hidden="true">&#127766;</span>
+                <span class="visually-hidden">Dark</span>
+            </label>
+        </div>
+  </details>
+  
+  <div class="page">
+
+    <!-- 1. circle() -->
+    <section id="s1">
+      <h2>1. circle()</h2>
+      <div class="toggle-wrap">
+        <button class="btn on" id="c1off" onclick="setCircle(false)">No shape-outside</button>
+        <button class="btn" id="c1on"  onclick="setCircle(true)">shape-outside: circle(50%)</button>
+      </div>
+      <div class="demo">
+        <div class="circle-float" id="c1">🌿</div>
+        <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Notice how the text curves around the circular element when shape-outside is active. Without it, the text wraps around the invisible rectangular box — leaving awkward empty corners on each side of the circle.</p>
+        <p class="body-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p>
+      </div>
+    </section>
+
+    <!-- 2. clip-path + shape-outside -->
+    <section id="s2">
+      <h2>2. shape-outside + clip-path</h2>
+      <div class="toggle-wrap">
+        <button class="btn" onclick="setClip('none')">Neither</button>
+        <button class="btn" onclick="setClip('shape')">shape-outside only</button>
+        <button class="btn" onclick="setClip('clip')">clip-path only</button>
+        <button class="btn on" onclick="setClip('both')">Both together</button>
+      </div>
+      <div class="demo">
+        <div class="clip-float both" id="c2">🏺</div>
+        <p class="body-text">Donec sollicitudin molestie malesuada. Vivamus magna. Cras in mi at felis aliquet congue. Use both shape-outside and clip-path to match the visual boundary of the element with the text-flow boundary. Without clip-path the element looks square but text wraps in a circle. Without shape-outside the element is clipped but text still wraps around the rectangle.</p>
+        <p class="body-text">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+      </div>
+    </section>
+
+    <!-- 3. polygon() -->
+    <section id="s3">
+      <h2>3. polygon()</h2>
+      <div class="toggle-wrap">
+        <button class="btn on" id="p3off" onclick="setPolygon(false)">No shape-outside</button>
+        <button class="btn" id="p3on"  onclick="setPolygon(true)">polygon() active</button>
+      </div>
+      <div class="demo">
+        <div class="polygon-float" id="c3">
+          "Words curve around elements the way rivers curve around rocks — following the path of least resistance."
+          <cite>— CSS shape-outside</cite>
+        </div>
+        <p class="body-text">Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Notice how the text follows the diagonal left edge of the pull quote box when shape-outside is active instead of hitting a flat vertical wall.</p>
+        <p class="body-text">Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit.</p>
+      </div>
+    </section>
+
+    <!-- 4. ellipse() -->
+    <section id="s4">
+      <h2>4. ellipse()</h2>
+      <div class="toggle-wrap">
+        <button class="btn on" id="e4off" onclick="setEllipse(false)">No shape-outside</button>
+        <button class="btn" id="e4on"  onclick="setEllipse(true)">shape-outside: ellipse(50% 50%)</button>
+      </div>
+      <div class="demo">
+        <div class="ellipse-float" id="c4">🥚</div>
+        <p class="body-text">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna. Cras in mi at felis aliquet congue. The ellipse is wider than it is tall — so without shape-outside the text wraps the rectangular box and leaves empty space in the corners. With shape-outside active, the text follows the actual oval curve of the element.</p>
+        <p class="body-text">Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+      </div>
+    </section>
+
+    <!-- 5. shape-margin -->
+    <section id="s5">
+      <h2>5. shape-margin</h2>
+      <div class="toggle-wrap">
+        <button class="btn on" id="m0" onclick="setMargin(0)">shape-margin: 0</button>
+        <button class="btn" id="m1" onclick="setMargin(1)">shape-margin: .5rem</button>
+        <button class="btn" id="m2" onclick="setMargin(2)">shape-margin: 1.5rem</button>
+      </div>
+      <div class="demo">
+        <div class="margin-float m0" id="c5">☀️</div>
+        <p class="body-text">Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Watch how close the text gets to the circle edge as you increase the shape-margin value. Without margin, words press uncomfortably tight against the shape boundary. A larger margin gives the text room to breathe.</p>
+        <p class="body-text">Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum. Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh eget felis porttitor volutpat.</p>
+      </div>
+    </section>
+
+    <!-- 6. Responsive -->
+    <section id="s6">
+      <h2>6. Responsive reflow</h2>
+      <div class="resize-box">
+        <div class="resp-float">🌊</div>
+        <p class="body-text">Drag the right edge of this box to make it narrower. At very narrow widths the text gets squeezed into short awkward lines beside the float. Below 500px the media query disables the float and the image stacks above the text instead. Always test shape-outside at every viewport width.</p>
+        <p class="body-text">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function setCircle(on) {
+      document.getElementById('c1').classList.toggle('active', on);
+      document.getElementById('c1off').classList.toggle('on', !on);
+      document.getElementById('c1on').classList.toggle('on', on);
+    }
+
+    function setClip(mode) {
+      const el = document.getElementById('c2');
+      el.className = 'clip-float ' + (mode === 'none' ? '' : mode);
+      document.querySelectorAll('#s2 .btn').forEach(btn => btn.classList.remove('on'));
+      event.target.classList.add('on');
+    }
+
+    function setPolygon(on) {
+      document.getElementById('c3').classList.toggle('active', on);
+      document.getElementById('p3off').classList.toggle('on', !on);
+      document.getElementById('p3on').classList.toggle('on', on);
+    }
+
+    function setEllipse(on) {
+      document.getElementById('c4').classList.toggle('active', on);
+      document.getElementById('e4off').classList.toggle('on', !on);
+      document.getElementById('e4on').classList.toggle('on', on);
+    }
+
+    function setMargin(level) {
+      const el = document.getElementById('c5');
+      el.className = 'margin-float ' + ['m0','m1','m2'][level];
+      ['m0','m1','m2'].forEach((id, i) => {
+        document.getElementById(id).classList.toggle('on', i === level);
+      });
+    }
+  </script>
+
+</body>
+</html>
