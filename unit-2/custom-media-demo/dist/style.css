@@ -1,3 +1,250 @@
+:root {
+    color-scheme: light;
+
+    /* ---- Seeds ---- */
+    --seed-bg: #f4f0f8;
+    --seed-surface: #ffffff;
+    --seed-text: #2f2235;
+    --seed-text-muted: #60495A;
+    --seed-accent: oklch(0.45 0.14 300);
+    --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --seed-link: var(--seed-accent);
+    --seed-link-hover: var(--seed-accent-hover);
+    --seed-border: #d8c8e0;
+    --seed-border-strong: #b49bbf;
+
+    /* ---- Accent ramp ---- */
+    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
+    --accent-500: var(--seed-accent);
+    --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
+    --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
+}
+/* ---- Switching ---- */
+/* User chose dark */
+html:has(input[name='theme-preference'][value='dark']:checked) {
+    color-scheme: dark;
+}
+/* User chose system and OS is dark */
+@media (prefers-color-scheme: dark) {
+    html:has(input[name='theme-preference'][value='system']:checked) {
+        color-scheme: dark;
+    }
+}
+:root,
+html {
+    /* ---- Semantic tokens ---- */    
+    --color-bg:           light-dark(var(--seed-bg),           oklch(0.25 0.04 300));
+    --color-surface:      light-dark(var(--seed-surface),      oklch(0.29 0.05 300));
+    --color-text:         light-dark(var(--seed-text),         oklch(0.92 0.02 300));
+    --color-text-muted:   light-dark(var(--seed-text-muted),   oklch(0.85 0.04 300));
+    --color-accent:       light-dark(var(--seed-accent),       oklch(0.62 0.14 300));
+    --color-accent-hover: light-dark(var(--seed-accent-hover), oklch(0.68 0.16 300));
+    --color-link:         light-dark(var(--seed-link),         oklch(0.65 0.14 300));
+    --color-link-hover:   light-dark(var(--seed-link-hover),   oklch(0.72 0.16 300));
+    --color-border:       light-dark(var(--seed-border),       oklch(0.30 0.05 300));
+    --color-border-strong:light-dark(var(--seed-border-strong),oklch(0.36 0.06 300));
+
+    /* Tint the native checkboxes, radios, and range sliders */
+    accent-color: var(--color-accent);
+
+    /* ---- Header chrome ---- */
+    --header-bg: var(--color-accent);
+    --header-text: light-dark(#ffffff, #f0eaf8);
+
+    /* ---- Theme toggle (consumed by theme-toggle.css) ---- */
+    --theme-toggle-bg:           color-mix(in srgb, var(--header-text) 20%, var(--header-bg));
+    --theme-toggle-border:       color-mix(in srgb, var(--header-text) 40%, var(--header-bg));
+    --theme-toggle-bg-hover:     color-mix(in srgb, var(--header-text) 30%, var(--header-bg));
+    --theme-toggle-border-hover: color-mix(in srgb, var(--header-text) 55%, var(--header-bg));
+
+    /* ---- Shadows ---- */
+    --shadow-color: light-dark(rgb(47 34 53 / 0.10), rgb(0 0 0 / 0.30));
+    --shadow-sm:    0 1px 2px 0 var(--shadow-color);
+    --shadow-md:    0 1px 3px 0 var(--shadow-color);
+
+    /* ---- Status badges --- */
+    --color-status-open:              #ffffff;
+    --color-status-open-bg:           oklch(0.42 0.10 300);
+    --color-status-construction:      #ffffff;
+    --color-status-construction-bg:   oklch(0.30 0.08 300);
+
+    /* ---- Nav ---- */
+    --color-nav-bg:   oklch(0.35 0.09 300);
+    --color-nav-text: #ffffff;
+}
+/* Non-color tokens: spacing, typography, borders, shadows.
+   These values should be referenced by every other layer. */
+:root {
+    /* TODO: Define spacing, font, radius, and shadow tokens here */
+    /*old space
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    */
+    /* Unit3 part A New Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /*typography*/
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Verdana', sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --font-size-base: 1rem;
+    --font-size-hero: clamp(1.75rem, 4vw + 1rem, 3.25rem);
+    --font-size-section: clamp(1.25rem, 2vw + 0.5rem, 2rem);
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --line-height-body: 1.7;
+    --line-height-heading: 1.25;
+    
+    /*unit3 part A typography*/
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: monospace;
+    --font-size-sm: 1.4rem;
+    --font-size-md: 1.6rem;
+    --font-size-lg: 1.8rem;
+    
+    /*borders*/
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 2rem;
+
+    /*shadows*/
+    --shadow-sm: 0 1px 4px rgba(44, 36, 22, 0.08);
+    --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.14);
+    /*for unit 3 visual effects*/
+    /*two-layer stacks*/
+    --shadow-card:   0 1px 3px var(--shadow-color),
+                     0 4px 12px var(--shadow-color);
+ 
+    --shadow-raised: 0 4px 8px var(--shadow-color),
+                     0 12px 28px var(--shadow-color);
+ 
+    /*For the glass panel*/
+    --shadow-glass:  0 8px 32px oklch(0 0 0 / 0.22);
+
+
+    --focus-ring: 2px solid var(--color-primary);
+    --focus-ring-offset: 2px;
+
+    /*transition*/
+    --transition-fast: 150ms ease;
+
+    /*unit 3 part A*/
+    /* Radii */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    /* Transitions */
+    --transition-base: 0.2s ease;
+    /* Icons */
+    --icon-size-sm: 24px;
+    --icon-size-md: 32px;
+    /* Focus */
+    --outline-width: 2px;
+}
+.site-nav {
+    background-color: var(--color-nav-bg);
+    padding-block: var(--spacing-sm);
+    padding-inline: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+
+    /* home link stays left, toggle is pushed to the right */
+    & .site-nav__home {
+        color: var(--color-nav-text);
+        text-decoration: none;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.04em;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast);
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
+        }
+
+        &:focus-visible {
+            outline: var(--focus-ring);
+            outline-offset: var(--focus-ring-offset);
+        }
+    }
+
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    & a {
+        color: var(--color-nav-text);
+        text-decoration: none;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.04em;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-sm);
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast);
+
+        &[aria-current="page"] {
+            background-color: var(--color-accent);
+            color: #ffffff;
+        }
+
+        &:not([aria-current="page"]):hover {
+            background-color: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
+        }
+
+        &:focus-visible {
+            outline: var(--focus-ring);
+            outline-offset: var(--focus-ring-offset);
+        }
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+        }
+    }
+
+    /* push the theme toggle to the far right */
+    & .theme-menu {
+        margin-inline-start: auto;
+    }
+}
+/* responsive: stack links below home on small screens */
+@media (max-width: 480px) {
+    .site-nav {
+        & ul {
+            order: 3;
+            width: 100%;
+            padding-block-start: var(--spacing-xs);
+            border-top: 1px solid color-mix(in srgb, var(--color-nav-text) 20%, transparent);
+        }
+
+        & .theme-menu {
+            order: 2;
+        }
+    }
+}
 /* ===== RESET ===== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,10 +253,11 @@
 }
 body {
   font-family: sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 /* ===== NAV ===== */
+/*
 .nav {
   background: #1a1a2e;
   color: white;
@@ -19,55 +267,62 @@ body {
   gap: 1rem;
   align-items: center;
 }
+*/
 @media (min-width: 768px) {
-  .nav {
+/*
+.nav {
     flex-direction: row;
     justify-content: space-between;
   }
+    */
 }
+/*
 .nav .brand {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 .nav .links {
   display: flex;
   gap: 1.5rem;
 }
+
 .nav .links a {
   color: #aaa;
   text-decoration: none;
   font-size: 0.9rem;
 }
+*/
 /* ===== HERO ===== */
-.hero {
-  background: #16213e;
-  color: white;
+.hero1 {
+  background: var(--color-bg);
+  color: var(--color-text);
   padding: 3rem 2rem;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .hero {
+  .hero1 {
     text-align: left;
     padding: 5rem 4rem;
   }
 }
-.hero h1 {
+.hero1 h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  .hero h1 {
+  .hero1 h1 {
     font-size: 3rem;
   }
 }
-.hero p {
-  color: #aaa;
+.hero1 p {
+  color: var(--color-text-muted);
   font-size: 1rem;
   max-width: 500px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .hero p {
+  .hero1 p {
     margin: 0;
   }
 }
@@ -91,7 +346,7 @@ body {
   }
 }
 .card {
-  background: white;
+  background: var(--color-surface);
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -104,15 +359,16 @@ body {
 .card h3 {
   font-size: 1rem;
   margin-bottom: 0.3rem;
+  color: var(--color-text);
 }
 .card p {
   font-size: 0.8rem;
-  color: #888;
+  color: var(--color-text-muted);
 }
 /* ===== FOOTER ===== */
 .footer {
-  background: #1a1a2e;
-  color: #aaa;
+  background: var(--color-border-strong);
+  color: var(--color-text);
   padding: 1.5rem 2rem;
   text-align: center;
   font-size: 0.85rem;
