@@ -6,15 +6,15 @@
    background-color: var(--color-surface);
    border: 1px solid var(--color-border);
    border-radius: var(--radius-md);
-   padding: var(--space-lg);
+   padding: var(--spacing-lg);
    box-shadow: var(--shadow-sm);
 }
 
 .form-field{
    display: flex;
    flex-direction: column;
-   gap: var(--space-xs);
-   margin-bottom: var(--space-md);
+   gap: var(--spacing-xs);
+   margin-bottom: var(--spacing-md);
    label{
      font-size: calc(var(--font-size-base) * 0.7);
      font-weight: var(--font-weight-bold);
@@ -38,13 +38,13 @@
    background-color: var(--color-surface);
    border: 1px solid var(--color-border);
    border-radius: var(--radius-sm);
-   padding: var(--space-sm) var(--space-md);
+   padding: var(--spacing-sm) var(--spacing-md);
    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 
    &:focus-visible{
      outline: none;
-     border-color: var(--color-primary);
-     box-shadow: 0 0 0 var(--focus-ring-offset) color-mix(in srgb, var(--color-primary) 25%, transparent);
+     border-color: var(--color-link);
+     box-shadow: 0 0 0 var(--focus-ring-offset) color-mix(in srgb, var(--color-link) 25%, transparent);
    }
 
    &:focus:not(:focus-visible){
@@ -63,6 +63,6 @@ select{
    appearance: none;
    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a6a56' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
    background-repeat: no-repeat;
-   background-position: right var(--space-md) center;
-   padding-right: var(--space-lg);
+   background-position: right var(--spacing-md) center;
+   padding-right: var(--spacing-lg);
 }
