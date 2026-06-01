@@ -321,6 +321,7 @@ html:has(input[value="dark"]:checked) .hero::after {
     border-radius: var(--radius-md);
     overflow: hidden;
     height: 140px;
+    isolation: isolate;
 }
 .blend-strip-image {
     width: 100%;
