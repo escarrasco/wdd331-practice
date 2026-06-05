@@ -1,0 +1,123 @@
+.articles-page {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  min-block-size: 100dvb;
+}
+
+/* HEADER*/
+.articles-page header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding-block: var(--spacing-xl);
+  padding-inline: var(--spacing-xl);
+  text-align: center;
+}
+
+.articles-page header h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-section);
+  margin-block-end: var(--spacing-xs);
+}
+
+.articles-page header p {
+  color: color-mix(in srgb, var(--header-text) 75%, transparent);
+  font-size: 0.95rem;
+}
+
+/* MAIN */
+.articles-page main {
+  max-inline-size: 960px;
+  margin-inline: auto;
+  padding-block: var(--spacing-xl);
+  padding-inline: var(--spacing-lg);
+}
+
+/* CARD GRID*/
+.articles-page .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: var(--spacing-lg);
+}
+
+/*CARD */
+.articles-page .card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.articles-page .card:hover {
+  box-shadow: var(--shadow-raised);
+  transform: translateY(-3px);
+}
+
+/*Aspect Ratio + Object-fit */
+.articles-page .card > div:first-child {
+  aspect-ratio: 16 / 9;
+  block-size: auto;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--color-accent) 60%, #fff) 0%,
+    color-mix(in oklch, var(--color-accent) 30%, #fff) 100%
+  );
+  
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* CARD BODY*/
+.articles-page .card > div:last-child {
+  padding-block: var(--spacing-md);
+  padding-inline: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-sm);
+}
+
+.articles-page .card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+.articles-page .card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: var(--line-height-body);
+  flex: 1;
+}
+
+.articles-page .card a {
+  color: var(--color-link);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+  margin-block-start: auto;cd 
+}
+
+.articles-page .card a::after {
+  content: "→";
+  transition: transform var(--transition-fast);
+}
+
+.articles-page .card a:hover {
+  color: var(--color-link-hover);
+}
+
+.articles-page .card a:hover::after {
+  transform: translateX(3px);
+}
