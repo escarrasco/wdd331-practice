@@ -22,6 +22,8 @@ with a manual theme toggle to override the system preference.
 - [@custom-media Demo for the teaching video](unit-2/custom-media-demo/index.html)
 - [Visual Effects](unit-3/visual-effects/index.html)
 - [Shape-outside Demo for the teaching video](unit-3/shape-outside-demo/index.html)
+- [Grid Layouts - Editorial  Layout](unit-4/grid-layouts/editorial.html)
+- [Grid Layouts - Card Grid](unit-4/grid-layouts/cards.html)
 ---
 
 ## CSS Architecture
