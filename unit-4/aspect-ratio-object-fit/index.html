@@ -34,128 +34,129 @@
                 </div>
             </details>
         </nav>
-    <h1>Aspect-ratio & Object-fit</h1>    
-    <!-- ── PART 1: The Problem ── -->
-    <div class="section">
-        <p class="section-title">Part 1 — The Problem: distorted images</p>
-        <span class="badge badge-bad">no aspect-ratio, no object-fit</span>
+        <main>
+            <h1>Aspect-ratio & Object-fit</h1>    
+            <!-- ── PART 1: The Problem ── -->
+            <div class="section">
+                <p class="section-title">Part 1 — The Problem: distorted images</p>
+                <span class="badge badge-bad">no aspect-ratio, no object-fit</span>
 
-        <div class="grid3">
-        <div class="card">
-            <img src="https://picsum.photos/id/10/300/500" >
-            <div class="card-body">tall photo → squeezed</div>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/id/20/600/200" >
-            <div class="card-body">wide photo → stretched</div>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/id/30/300/300">
-            <div class="card-body">square photo → ok here</div>
-        </div>
-        </div>
+                <div class="grid3">
+                <div class="card">
+                    <img src="https://picsum.photos/id/10/300/500" >
+                    <div class="card-body">tall photo → squeezed</div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/id/20/600/200" >
+                    <div class="card-body">wide photo → stretched</div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/id/30/300/300">
+                    <div class="card-body">square photo → ok here</div>
+                </div>
+                </div>
 
-        <p>one image stretched vertically by its grid neighbour:</p>
+                <p>one image stretched vertically by its grid neighbour:</p>
 
-        <div class="problem-grid">
-        <div class="problem-cell">
-            <div class="problem-cell-text">
-            Cell A — lots of text forces this row to be very tall inside the grid. 
-            <p>Lorem ipsum dolor sit amet. Et maiores reiciendis cum nobis atque ut corrupti eaque. Est soluta officia rem nobis perspiciatis rem nihil vero sed ipsum sint cum ullam commodi. Cum neque quos ut voluptas officiis et blanditiis esse ut quos eaque ab minus quia et officiis nihil eos ipsa quia. Ut quis officia est voluptate doloribus est libero natus. </p><p>In facilis recusandae aut omnis eaque non quia reprehenderit. Eum molestias provident ad nemo quod ut voluptas nostrum et pariatur voluptatem est molestias corrupti et deleniti maiores ad quae tenetur. Aut obcaecati recusandae At eveniet galisum ut consequatur sint aut molestiae adipisci ea asperiores voluptatum! Aut vitae nisi ut consequuntur vero qui culpa magni. </p><p>Ut rerum voluptatem vel omnis placeat sit tenetur consequatur non corrupti pariatur ea consequuntur fugiat et enim eius hic repellendus tempore. Aut voluptatum ullam qui delectus suscipit sed tenetur obcaecati et internos perferendis et natus quia qui voluptatum quia non officiis cumque. </p>
+                <div class="problem-grid">
+                <div class="problem-cell">
+                    <div class="problem-cell-text">
+                    Cell A — lots of text forces this row to be very tall inside the grid. 
+                    <p>Lorem ipsum dolor sit amet. Et maiores reiciendis cum nobis atque ut corrupti eaque. Est soluta officia rem nobis perspiciatis rem nihil vero sed ipsum sint cum ullam commodi. Cum neque quos ut voluptas officiis et blanditiis esse ut quos eaque ab minus quia et officiis nihil eos ipsa quia. Ut quis officia est voluptate doloribus est libero natus. </p><p>In facilis recusandae aut omnis eaque non quia reprehenderit. Eum molestias provident ad nemo quod ut voluptas nostrum et pariatur voluptatem est molestias corrupti et deleniti maiores ad quae tenetur. Aut obcaecati recusandae At eveniet galisum ut consequatur sint aut molestiae adipisci ea asperiores voluptatum! Aut vitae nisi ut consequuntur vero qui culpa magni. </p><p>Ut rerum voluptatem vel omnis placeat sit tenetur consequatur non corrupti pariatur ea consequuntur fugiat et enim eius hic repellendus tempore. Aut voluptatum ullam qui delectus suscipit sed tenetur obcaecati et internos perferendis et natus quia qui voluptatum quia non officiis cumque. </p>
 
+                    </div>
+                </div>
+                <div class="problem-cell">
+                    <img src="https://picsum.photos/id/40/400/250">
+                </div>
+                </div>
             </div>
-        </div>
-        <div class="problem-cell">
-            <img src="https://picsum.photos/id/40/400/250">
-        </div>
-        </div>
-    </div>
 
-    <hr class="divider">
+            <hr class="divider">
 
-    <!-- ── PART 2: aspect-ratio ── -->
-    <div class="section">
-        <p class="section-title">Part 2 — aspect-ratio</p>
+            <!-- ── PART 2: aspect-ratio ── -->
+            <div class="section">
+                <p class="section-title">Part 2 — aspect-ratio</p>
 
-        <div class="ctrls" id="rc">
-        <button class="btn on" onclick="setR('16/9','16:9')">16:9</button>
-        <button class="btn" onclick="setR('4/3','4:3')">4:3</button>
-        <button class="btn" onclick="setR('1/1','1:1')">1:1</button>
-        <button class="btn" onclick="setR('3/4','3:4')">3:4</button>
-        </div>
+                <div class="ctrls" id="rc">
+                <button class="btn on" onclick="setR('16/9','16:9')">16:9</button>
+                <button class="btn" onclick="setR('4/3','4:3')">4:3</button>
+                <button class="btn" onclick="setR('1/1','1:1')">1:1</button>
+                <button class="btn" onclick="setR('3/4','3:4')">3:4</button>
+                </div>
 
-        <div class="grid4" id="rgrid"></div>
-    </div>
+                <div class="grid4" id="rgrid"></div>
+            </div>
 
-    <hr class="divider">
+            <hr class="divider">
 
-    <!-- ── PART 3: object-fit ── -->
-    <div class="section">
-        <p class="section-title">Part 3 — object-fit</p>
+            <!-- ── PART 3: object-fit ── -->
+            <div class="section">
+                <p class="section-title">Part 3 — object-fit</p>
 
-        <div class="ctrls" id="fc">
-        <button class="btn on" onclick="setF('cover')">cover</button>
-        <button class="btn" onclick="setF('contain')">contain</button>
-        <button class="btn" onclick="setF('fill')">fill</button>
-        <button class="btn" onclick="setF('none')">none</button>
-        </div>
+                <div class="ctrls" id="fc">
+                <button class="btn on" onclick="setF('cover')">cover</button>
+                <button class="btn" onclick="setF('contain')">contain</button>
+                <button class="btn" onclick="setF('fill')">fill</button>
+                <button class="btn" onclick="setF('none')">none</button>
+                </div>
 
-        <div class="grid4" id="fgrid"></div>
-        <p class="fit-note" id="fnote"></p>
-    </div>
+                <div class="grid4" id="fgrid"></div>
+                <p class="fit-note" id="fnote"></p>
+            </div>
 
-    <hr class="divider">
+            <hr class="divider">
 
-    <!-- ── PART 4: object-position ── -->
-    <div class="section">
-        <p class="section-title">Part 4 — object-position (same photo, different crop)</p>
+            <!-- ── PART 4: object-position ── -->
+            <div class="section">
+                <p class="section-title">Part 4 — object-position (same photo, different crop)</p>
 
-        <div class="pos-grid">
-        <div>
-            <p class="pos-label">top center</p>
-            <img class="pos-img top" src="https://picsum.photos/seed/named-grid/1600/1200" >
-            
-        </div>
-        <div>
-            <p class="pos-label active">center (default)</p>
-            <img class="pos-img active" src="https://picsum.photos/seed/named-grid/1600/1200" >
-            
-        </div>
-        <div>
-            <p class="pos-label">bottom  center</p>
-            <img class="pos-img bottom" src="https://picsum.photos/seed/named-grid/1600/1200" >
-            
-        </div>
-        </div>
-    </div>
+                <div class="pos-grid">
+                <div>
+                    <p class="pos-label">top center</p>
+                    <img class="pos-img top" src="https://picsum.photos/seed/named-grid/1600/1200" >
+                    
+                </div>
+                <div>
+                    <p class="pos-label active">center (default)</p>
+                    <img class="pos-img active" src="https://picsum.photos/seed/named-grid/1600/1200" >
+                    
+                </div>
+                <div>
+                    <p class="pos-label">bottom  center</p>
+                    <img class="pos-img bottom" src="https://picsum.photos/seed/named-grid/1600/1200" >
+                    
+                </div>
+                </div>
+            </div>
 
-    <hr class="divider">
+            <hr class="divider">
 
-    <!-- ── PART 5: The Full Pattern ── -->
-    <div class="section">
-        <p class="section-title">Part 5 — Fixed: the full pattern</p>
-        <span class="badge badge-good">width:100% + aspect-ratio:16/9 + object-fit:cover</span>
+            <!-- ── PART 5: The Full Pattern ── -->
+            <div class="section">
+                <p class="section-title">Part 5 — Fixed: the full pattern</p>
+                <span class="badge badge-good">width:100% + aspect-ratio:16/9 + object-fit:cover</span>
 
-        <div class="grid4">
-        <div class="card">
-            <img src="https://picsum.photos/id/10/600/400">
-            <div class="card-body">Forest</div>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/id/20/600/400">
-            <div class="card-body">City</div>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/id/30/600/400">
-            <div class="card-body">Abstract</div>
-        </div>
-        <div class="card">
-            <img src="https://picsum.photos/id/40/600/400">
-            <div class="card-body">Nature</div>
-        </div>
-        </div>
-    </div>
-
+                <div class="grid4">
+                <div class="card">
+                    <img src="https://picsum.photos/id/10/600/400">
+                    <div class="card-body">Forest</div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/id/20/600/400">
+                    <div class="card-body">City</div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/id/30/600/400">
+                    <div class="card-body">Abstract</div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/id/40/600/400">
+                    <div class="card-body">Nature</div>
+                </div>
+                </div>
+            </div>
+        </main>
     <script>
         const IMGS = [
         { id: 10, t: 'Forest' },
