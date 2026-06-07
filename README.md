@@ -24,6 +24,7 @@ with a manual theme toggle to override the system preference.
 - [Shape-outside Demo for the teaching video](unit-3/shape-outside-demo/index.html)
 - [Grid Layouts - Editorial  Layout](unit-4/grid-layouts/editorial.html)
 - [Grid Layouts - Card Grid](unit-4/grid-layouts/cards.html)
+- [Aspect-ratio & Object-fit Demo for the teaching video](unit-4/aspect-ratio-object-fit/index.html)
 ---
 
 ## CSS Architecture
