@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demo — aspect-ratio & object-fit</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body>
+
+    <!-- ── PART 1: The Problem ── -->
+    <div class="section">
+        <p class="section-title">Part 1 — The Problem: distorted images</p>
+        <span class="badge badge-bad">no aspect-ratio, no object-fit</span>
+
+        <div class="grid3">
+        <div class="card">
+            <img src="https://picsum.photos/id/10/300/500" style="width:100%; height:110px; display:block;">
+            <div class="card-body">tall photo → squeezed</div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/20/600/200" style="width:100%; height:110px; display:block;">
+            <div class="card-body">wide photo → stretched</div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/30/300/300" style="width:100%; height:110px; display:block;">
+            <div class="card-body">square photo → ok here</div>
+        </div>
+        </div>
+
+        <p style="font-size:12px; color:#888; margin-top:14px;">one image stretched vertically by its grid neighbour:</p>
+
+        <div class="problem-grid">
+        <div class="problem-cell">
+            <div class="problem-cell-text">
+            Cell A — lots of text forces this row to be very tall inside the grid. 
+            <p>Lorem ipsum dolor sit amet. Et maiores reiciendis cum nobis atque ut corrupti eaque. Est soluta officia rem nobis perspiciatis rem nihil vero sed ipsum sint cum ullam commodi. Cum neque quos ut voluptas officiis et blanditiis esse ut quos eaque ab minus quia et officiis nihil eos ipsa quia. Ut quis officia est voluptate doloribus est libero natus. </p><p>In facilis recusandae aut omnis eaque non quia reprehenderit. Eum molestias provident ad nemo quod ut voluptas nostrum et pariatur voluptatem est molestias corrupti et deleniti maiores ad quae tenetur. Aut obcaecati recusandae At eveniet galisum ut consequatur sint aut molestiae adipisci ea asperiores voluptatum! Aut vitae nisi ut consequuntur vero qui culpa magni. </p><p>Ut rerum voluptatem vel omnis placeat sit tenetur consequatur non corrupti pariatur ea consequuntur fugiat et enim eius hic repellendus tempore. Aut voluptatum ullam qui delectus suscipit sed tenetur obcaecati et internos perferendis et natus quia qui voluptatum quia non officiis cumque. </p>
+
+            </div>
+        </div>
+        <div class="problem-cell">
+            <img src="https://picsum.photos/id/40/400/250" style="width:100%; height:100%; display:block;">
+        </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── PART 2: aspect-ratio ── -->
+    <div class="section">
+        <p class="section-title">Part 2 — aspect-ratio</p>
+
+        <div class="ctrls" id="rc">
+        <button class="btn on" onclick="setR('16/9','16:9')">16:9</button>
+        <button class="btn" onclick="setR('4/3','4:3')">4:3</button>
+        <button class="btn" onclick="setR('1/1','1:1')">1:1</button>
+        <button class="btn" onclick="setR('3/4','3:4')">3:4</button>
+        </div>
+
+        <div class="grid4" id="rgrid"></div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── PART 3: object-fit ── -->
+    <div class="section">
+        <p class="section-title">Part 3 — object-fit</p>
+
+        <div class="ctrls" id="fc">
+        <button class="btn on" onclick="setF('cover')">cover</button>
+        <button class="btn" onclick="setF('contain')">contain</button>
+        <button class="btn" onclick="setF('fill')">fill</button>
+        <button class="btn" onclick="setF('none')">none</button>
+        </div>
+
+        <div class="grid4" id="fgrid"></div>
+        <p class="fit-note" id="fnote"></p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── PART 4: object-position ── -->
+    <div class="section">
+        <p class="section-title">Part 4 — object-position (same photo, different crop)</p>
+
+        <div class="pos-grid">
+        <div>
+            <img class="pos-img top" src="https://picsum.photos/seed/named-grid/1600/1200" >
+            <p class="pos-label">top center</p>
+        </div>
+        <div>
+            <img class="pos-img active" src="https://picsum.photos/seed/named-grid/1600/1200" >
+            <p class="pos-label active">center (default)</p>
+        </div>
+        <div>
+            <img class="pos-img bottom" src="https://picsum.photos/seed/named-grid/1600/1200" >
+            <p class="pos-label">bottom center</p>
+        </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── PART 5: The Full Pattern ── -->
+    <div class="section">
+        <p class="section-title">Part 5 — Fixed: the full pattern</p>
+        <span class="badge badge-good">width:100% + aspect-ratio:16/9 + object-fit:cover</span>
+
+        <div class="grid4">
+        <div class="card">
+            <img src="https://picsum.photos/id/10/600/400" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+            <div class="card-body">Forest</div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/20/600/400" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+            <div class="card-body">City</div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/30/600/400" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+            <div class="card-body">Abstract</div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/id/40/600/400" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+            <div class="card-body">Nature</div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        const IMGS = [
+        { id: 10, t: 'Forest' },
+        { id: 20, t: 'City' },
+        { id: 30, t: 'Abstract' },
+        { id: 40, t: 'Nature' }
+        ];
+
+        const NOTES = {
+        cover:   'Fills the box, crops overflow. Ratio preserved. Best for thumbnails.',
+        contain: 'Full image visible. May show empty space on sides.',
+        fill:    'Stretches image to fill. Ratio is broken. Avoid for photos.',
+        none:    'Natural image size. May overflow or leave large gaps.'
+        };
+
+        let ratio = '16/9';
+        let fit = 'cover';
+
+        function setR(r, label) {
+        ratio = r;
+        document.querySelectorAll('#rc .btn').forEach(b => b.classList.toggle('on', b.textContent === label));
+        buildR();
+        buildF();
+        }
+
+        function setF(f) {
+        fit = f;
+        document.querySelectorAll('#fc .btn').forEach(b => b.classList.toggle('on', b.textContent === f));
+        buildF();
+        }
+
+        function buildR() {
+        document.getElementById('rgrid').innerHTML = IMGS.map(i => `
+            <div class="card">
+            <img src="https://picsum.photos/id/${i.id}/600/400"
+                style="width:100%; aspect-ratio:${ratio}; object-fit:cover; display:block;">
+            <div class="card-body">${i.t}</div>
+            </div>
+        `).join('');
+        }
+
+        function buildF() {
+        document.getElementById('fgrid').innerHTML = IMGS.map(i => `
+            <div class="card">
+            <div style="width:100%; aspect-ratio:${ratio}; overflow:hidden; background:#ececea;">
+                <img src="https://picsum.photos/id/${i.id}/600/400"
+                    style="width:100%; height:100%; object-fit:${fit}; display:block;">
+            </div>
+            <div class="card-body">${i.t}</div>
+            </div>
+        `).join('');
+        document.getElementById('fnote').textContent = NOTES[fit];
+        }
+
+        buildR();
+        buildF();
+    </script>
+
+    </body>
+</html>
