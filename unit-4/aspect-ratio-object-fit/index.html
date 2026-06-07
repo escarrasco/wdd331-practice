@@ -9,6 +9,31 @@
     
     </head>
     <body>
+        <nav class="site-nav">
+            <a href="../../index.html">&larr; Home</a>
+            <details class="theme-menu">
+                <summary class="theme-control">
+                    <span class="visually-hidden">Color scheme</span>
+                </summary>
+                <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                    <label class="theme-control theme-pick" data-theme-pick="light">
+                        <input name="theme-preference" type="radio" value="light">
+                        <span aria-hidden="true">&#9788;&#65039;</span>
+                        <span class="visually-hidden">Light</span>
+                    </label>
+                    <label class="theme-control theme-pick" data-theme-pick="system">
+                        <input name="theme-preference" type="radio" value="system" checked>
+                        <span aria-hidden="true">&#9881;&#65039;</span>
+                        <span class="visually-hidden">System default</span>
+                    </label>
+                    <label class="theme-control theme-pick" data-theme-pick="dark">
+                        <input name="theme-preference" type="radio" value="dark">
+                        <span aria-hidden="true">&#127766;</span>
+                        <span class="visually-hidden">Dark</span>
+                    </label>
+                </div>
+            </details>
+        </nav>
     <h1>Aspect-ratio & Object-fit</h1>    
     <!-- ── PART 1: The Problem ── -->
     <div class="section">
