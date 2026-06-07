@@ -1,3 +1,6 @@
+:root{
+  --sidebar-width: 260px
+}
 /* PAGE */
 .editorial-page {
   background-color: var(--color-bg);
@@ -59,7 +62,7 @@
 @media (min-width: 700px) {
   .editorial-page .layout {
     grid-template-areas: "main sidebar";
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr var(--sidebar-width);
   }
 }
 
