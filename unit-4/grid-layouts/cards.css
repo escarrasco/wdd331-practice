@@ -1,3 +1,7 @@
+:root{
+  --card-image-height: 180px;
+}
+
 .articles-page {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -36,7 +40,7 @@
 /* CARD GRID*/
 .articles-page .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: var(--spacing-lg);
 }
 
@@ -59,8 +63,7 @@
 
 /*Aspect Ratio + Object-fit */
 .articles-page .card > div:first-child {
-  aspect-ratio: 16 / 9;
-  block-size: auto;
+  block-size: var(--card-image-height);
   background: linear-gradient(
     135deg,
     color-mix(in oklch, var(--color-accent) 60%, #fff) 0%,
