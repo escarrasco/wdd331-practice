@@ -25,9 +25,9 @@ with a manual theme toggle to override the system preference.
 - [Grid Layouts - Editorial  Layout](unit-4/grid-layouts/editorial.html)
 - [Grid Layouts - Card Grid](unit-4/grid-layouts/cards.html)
 - [Aspect-ratio & Object-fit Demo for the teaching video](unit-4/aspect-ratio-object-fit/index.html)
-- [Advanced - Card Grid](unit-4/grid-layouts/cards.html)
-- [Advanced - Container Demo](unit-4/grid-layouts/advanced/container-demo.htmlcards.html)
-- [Advanced - Sticky Demo](unit-4/grid-layouts/advanced/sticky-demo.html)
+- [Subgrid and Container Layouts - Card Grid](unit-4/grid-layouts/cards.html)
+- [Subgrid and Container Layouts - Container Demo](unit-4/grid-layouts/advanced/container-demo.htmlcards.html)
+- [Subgrid and Container Layouts - Sticky Demo](unit-4/grid-layouts/advanced/sticky-demo.html)
 - [Masonry for the teaching video](unit-4/mansory-demo/index.html)
 ---
 
