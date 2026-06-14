@@ -1,0 +1,168 @@
+.container-demo-page {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  min-block-size: 100dvb;
+}
+
+/* PAGE HEADER */
+.container-demo-page header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding-block: var(--spacing-xl);
+  padding-inline: var(--spacing-xl);
+  text-align: center;
+}
+
+.container-demo-page header h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  margin-block-end: var(--spacing-xs);
+}
+
+.container-demo-page header p {
+  color: color-mix(in srgb, var(--header-text) 75%, transparent);
+  font-size: var(--font-size-sm);
+}
+
+/* PAGE MAIN */
+.container-demo-page main {
+  max-inline-size: 1080px;
+  margin-inline: auto;
+  padding-block: var(--spacing-xl);
+  padding-inline: var(--spacing-lg);
+}
+
+/* DEMO LAYOUT*/
+.demo-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+/* CONTEXT WRAPPERS */
+.context-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.context-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-block-end: 1px solid var(--color-border);
+  padding-block-end: var(--spacing-sm);
+}
+
+.context-label span {
+  font-weight: var(--font-weight-normal);
+  text-transform: none;
+}
+
+/* CONTAINMENT CONTEXT*/
+.card-container {
+  container-type: inline-size;
+  container-name: card-slot;
+}
+
+/* FEATURE CARD — base (stacked / narrow) layout
+   Default: image on top, body below — works for any width. */
+.feature-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card__image {
+  block-size: 140px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--color-accent) 55%, #fff) 0%,
+    color-mix(in oklch, var(--color-accent) 25%, #fff) 100%
+  );
+}
+
+.feature-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  flex: 1;
+}
+
+.feature-card__tag {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.feature-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-heading);
+  color: var(--color-text);
+}
+
+.feature-card__desc {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+  flex: 1;
+}
+
+.feature-card__cta {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-link);
+  text-decoration: none;
+  margin-block-start: var(--spacing-xs);
+  transition: color var(--transition-fast);
+}
+
+.feature-card__cta:hover {
+  color: var(--color-link-hover);
+}
+
+/* CONTAINER QUERY — breakpoint 1: ≥ 360px
+   At this width the card has enough room to bump up the image
+   height slightly */
+@container card-slot (inline-size >= 360px) {
+  .feature-card__image {
+    block-size: 160px;
+  }
+
+  .feature-card__title {
+    font-size: var(--font-size-md);
+  }
+}
+
+/* CONTAINER QUERY — breakpoint 2: ≥ 480px
+   At this width the card shifts to a horizontal layout:
+   image on the left, body content on the right. */
+@container card-slot (inline-size >= 480px) {
+  .feature-card {
+    flex-direction: row;
+  }
+
+  .feature-card__image {
+    inline-size: 200px;
+    block-size: auto;
+    flex-shrink: 0;
+  }
+
+  .feature-card__body {
+    justify-content: center;
+  }
+}
