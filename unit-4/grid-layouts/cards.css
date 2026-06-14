@@ -109,7 +109,7 @@
   align-items: center;
   gap: var(--spacing-xs);
   transition: color var(--transition-fast), gap var(--transition-fast);
-  margin-block-start: auto;cd 
+  margin-block-start: auto;
 }
 
 .articles-page .card a::after {
@@ -124,3 +124,56 @@
 .articles-page .card a:hover::after {
   transform: translateX(3px);
 }
+
+/*SUBGRID*/
+@supports (grid-template-rows: subgrid) {
+  .articles-page .card-grid {
+    /* Four tracks per card-row band, repeated for every auto-placed row */
+    grid-template-rows: repeat(
+      auto-fill,
+      var(--card-image-height) /* 1: image */
+      auto                     /* 2: title*/
+      1fr                      /* 3: body */
+      auto                     /* 4: footer*/
+    );
+    column-gap: var(--spacing-lg);
+    row-gap: 0;
+    align-items: start;
+  }
+ 
+  .articles-page .card {
+    grid-row: span 4;
+    display: grid;
+    grid-template-rows: subgrid;
+    overflow: hidden;
+    flex-direction: unset;
+  }
+ 
+  .articles-page .card > div:last-child {
+    display: contents;
+  }
+ 
+  .articles-page .card h2 {
+    padding-inline: var(--spacing-md);
+    padding-block-start: var(--spacing-md);
+    align-self: start;
+  }
+ 
+  .articles-page .card p {
+    padding-inline: var(--spacing-md);
+    align-self: start;
+    flex: unset;
+  }
+ 
+  .articles-page .card a {
+    padding-inline: var(--spacing-md);
+    padding-block-end: var(--spacing-md);
+    align-self: end;
+    margin-block-start: unset;
+  }
+ 
+  .articles-page .card > div:first-child {
+    block-size: 100%; 
+  }
+}
+ 
