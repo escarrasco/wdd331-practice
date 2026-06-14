@@ -116,7 +116,7 @@
 }
 
 .feature-card__desc {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   line-height: var(--line-height-body);
   flex: 1;
