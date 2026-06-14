@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Demo</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="sticky-demo.css">
+</head>
+<body class="sticky-demo-page">
+
+  <header>
+    <h1>Sticky Positioning</h1>
+    <p>Section headers stick as you scroll through their section, then get pushed away by the next one.</p>
+  </header>
+
+  <div class="page-layout">
+    <aside class="toc">
+      <div class="toc__inner">
+        <p class="toc__heading">On this page</p>
+        <nav>
+          <ul>
+            <li><a href="#section-grid">CSS Grid</a></li>
+            <li><a href="#section-flex">Flexbox</a></li>
+            <li><a href="#section-logical">Logical Properties</a></li>
+            <li><a href="#section-custom">Custom Properties</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main>
+      <!-- SECTION 1 -->
+      <section id="section-grid" class="content-section">
+       <div class="clip-container">
+          <h2 class="section-header">CSS Grid</h2>
+        </div>
+        <div class="section-body">
+          <p>CSS Grid gives you two-dimensional control over layout. You can define explicit columns and rows, place items precisely, or let auto-placement fill gaps intelligently.</p>
+          <p>Named grid areas make templates readable. Instead of counting column numbers, you sketch the layout with ASCII-art strings and assign semantic names to zones. The browser does the math.</p>
+          <p>Grid is best when the layout drives the content — when you have a known structure and need items to conform to it. Combine it with subgrid to share tracks with child elements and achieve perfect cross-card alignment.</p>
+          <p>The <code>minmax()</code> function lets tracks grow and shrink between a minimum and maximum size, while <code>auto-fit</code> and <code>auto-fill</code> let the browser decide how many columns fit at any given viewport width.</p>
+          <p>Implicit tracks — rows or columns the browser creates automatically when content overflows the explicit grid — can be sized with <code>grid-auto-rows</code> and <code>grid-auto-columns</code>.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="section-flex" class="content-section">
+        <div class="clip-container">
+          <h2 class="section-header">Flexbox</h2>
+        </div>
+        <div class="section-body">
+          <p>Flexbox excels at one-dimensional layout: distributing items along a single axis with flexible sizing. It is the right tool when content determines how much space each item needs.</p>
+          <p>The main axis runs in the direction of <code>flex-direction</code>. Items grow and shrink along it according to <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. The shorthand <code>flex</code> lets you set all three at once.</p>
+          <p>Alignment on the cross axis uses <code>align-items</code> and <code>align-self</code>. Spacing along the main axis uses <code>justify-content</code>. Both axes together let you center content in a container in two lines of CSS.</p>
+          <p>Flex wrapping — enabled with <code>flex-wrap: wrap</code> — lets items flow into new rows or columns when the container is too narrow, producing a rough responsive grid without any media queries.</p>
+          <p>For nav bars, button groups, form rows, and card footers, flex remains the most direct tool: reach for it when content quantity or length is unknown and items should simply line up and distribute naturally.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="section-logical" class="content-section">
+        <div class="clip-container">
+          <h2 class="section-header">Logical Properties</h2>
+        </div>
+        <div class="section-body">
+          <p>Logical properties replace physical directions — top, right, bottom, left — with writing-mode-relative equivalents: block-start, inline-end, block-end, inline-start.</p>
+          <p>In a left-to-right horizontal writing mode, block is vertical and inline is horizontal, so <code>margin-block-end</code> equals <code>margin-bottom</code> and <code>padding-inline-start</code> equals <code>padding-left</code>.</p>
+          <p>Switching to a vertical writing mode or a right-to-left language flips the mapping automatically. Layouts built with logical properties need no override stylesheets for international contexts.</p>
+          <p>Shorthand logical properties — <code>margin-block</code>, <code>margin-inline</code>, <code>padding-block</code>, <code>padding-inline</code> — accept one or two values just like their physical counterparts.</p>
+          <p>Browser support is now excellent. The practical advice: start new projects with logical properties and convert physical ones as you touch existing code. Mixing the two in the same rule is the only thing to avoid.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="section-custom" class="content-section">
+        <div class="clip-container">
+          <h2 class="section-header">Custom Properties</h2>
+        </div>
+        <div class="section-body">
+          <p>CSS custom properties — also called CSS variables — store reusable values that cascade and inherit just like any other CSS property. Declare them with a double-dash prefix and consume them with <code>var()</code>.</p>
+          <p>The most powerful use of custom properties is as design tokens: named values for colors, spacing, typography, and shadow that every other rule references. Changing a token in one place updates the whole system.</p>
+          <p>Custom properties can be reassigned in any selector scope, including media queries and <code>:is()</code> selectors. This makes them ideal for theme switching: flip a handful of token values on <code>:root</code> or <code>[data-theme]</code> and the entire page repaints.</p>
+          <p>The <code>@property</code> rule lets you register a custom property with a type, initial value, and inheritance flag. Registered properties can be animated with <code>@keyframes</code>, something unregistered properties cannot do.</p>
+          <p>Combine custom properties with <code>calc()</code>, <code>clamp()</code>, and <code>color-mix()</code> to build expressive systems where relationships between values are encoded in the CSS itself rather than hard-coded everywhere.</p>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

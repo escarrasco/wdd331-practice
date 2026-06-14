@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Container Query Demo</title>
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="container-demo.css">
+</head>
+<body class="container-demo-page">
+
+  <header>
+    <h1>Container Queries</h1>
+    <p>The same component adapts to its placement context — no media queries involved.</p>
+  </header>
+
+  <main>
+
+    <section class="demo-layout">
+
+      <!-- NARROW CONTEXT -->
+      <div class="context-wrapper context-wrapper--narrow">
+        <p class="context-label">Narrow context <span>(sidebar)</span></p>
+
+        <!-- containment context-->
+        <div class="card-container">
+          <article class="feature-card">
+            <div class="feature-card__image" aria-hidden="true"></div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">CSS</span>
+              <h2 class="feature-card__title">Subgrid Alignment</h2>
+              <p class="feature-card__desc">
+                Share row tracks between a parent grid and its children
+                so titles, bodies, and footers align across columns.
+              </p>
+              <a href="#" class="feature-card__cta">Read more →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="card-container">
+          <article class="feature-card">
+            <div class="feature-card__image" aria-hidden="true"></div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Layout</span>
+              <h2 class="feature-card__title">Intrinsic Sizing with min-content</h2>
+              <p class="feature-card__desc">
+                Let content drive its own dimensions using
+                min-content, max-content, and fit-content().
+              </p>
+              <a href="#" class="feature-card__cta">Read more →</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- WIDE CONTEXT-->
+      <div class="context-wrapper context-wrapper--wide">
+        <p class="context-label">Wide context <span>(main content)</span></p>
+
+        <div class="card-container">
+          <article class="feature-card">
+            <div class="feature-card__image" aria-hidden="true"></div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">CSS</span>
+              <h2 class="feature-card__title">Subgrid Alignment</h2>
+              <p class="feature-card__desc">
+                Share row tracks between a parent grid and its children
+                so titles, bodies, and footers align across columns.
+              </p>
+              <a href="#" class="feature-card__cta">Read more →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="card-container">
+          <article class="feature-card">
+            <div class="feature-card__image" aria-hidden="true"></div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Layout</span>
+              <h2 class="feature-card__title">Intrinsic Sizing with min-content</h2>
+              <p class="feature-card__desc">
+                Let content drive its own dimensions using
+                min-content, max-content, and fit-content().
+              </p>
+              <a href="#" class="feature-card__cta">Read more →</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
