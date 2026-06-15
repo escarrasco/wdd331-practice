@@ -70,9 +70,9 @@
     color-mix(in oklch, var(--color-accent) 30%, #fff) 100%
   );
   
-  object-fit: cover;
+  /*object-fit: cover;*/
   width: 100%;
-  display: block;
+  /*display: block;*/
   flex-shrink: 0;
 }
 
@@ -129,13 +129,13 @@
 @supports (grid-template-rows: subgrid) {
   .articles-page .card-grid {
     /* Four tracks per card-row band, repeated for every auto-placed row */
-    grid-template-rows: repeat(
+    grid-auto-rows:
       auto-fill,
       var(--card-image-height) /* 1: image */
       auto                     /* 2: title*/
       1fr                      /* 3: body */
       auto                     /* 4: footer*/
-    );
+    ;
     column-gap: var(--spacing-lg);
     row-gap: 0;
     align-items: start;
@@ -147,6 +147,7 @@
     grid-template-rows: subgrid;
     overflow: hidden;
     flex-direction: unset;
+    margin-block-end: var(--spacing-lg);
   }
  
   .articles-page .card > div:last-child {
