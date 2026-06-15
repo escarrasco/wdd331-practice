@@ -34,6 +34,7 @@
   padding-block: var(--spacing-xl);
   padding-inline: var(--spacing-lg);
   align-items: start;
+   /* overflow: visible; default, intentionally not set */
 }
 
 /*STICKY SIDEBAR*/
