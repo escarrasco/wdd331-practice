@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Text Properties Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- PART 1: text-wrap balance (heading) and pretty (paragraph) -->
+  <section>
+    <h2>Part 1 — text-wrap</h2>
+
+    <h1>Modern CSS Makes Typography Easy and Predictable for Everyone</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
+    </p>
+  </section>
+
+
+  <!-- PART 2: initial-letter (drop cap) -->
+  <section>
+    <h2>Part 2 — initial-letter (Drop Cap)</h2>
+
+    <p class="dropcap">
+      A Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
+    </p>
+  </section>
+
+
+  <!-- PART 3: line-clamp — card with truncated description -->
+  <section>
+    <h2>Part 3 — line-clamp</h2>
+
+    <div class="card">
+      <h3>Mountain Ridge Trail</h3>
+      <p class="card-description">
+        A Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- PART 4: ch unit — line length control -->
+  <section>
+    <h2>Part 4 — ch unit (max-width: 65ch)</h2>
+
+    <article>
+      <p id="measure-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est.
+      </p>
+    </article>
+  </section>
+
+
+  <!-- PART 5: lh and rlh — vertical rhythm -->
+  <section>
+    <h2>Part 5 — lh and rlh (Vertical Rhythm)</h2>
+
+    <div class="rhythm-demo">
+      <p>First paragraph — margin-block-end: 1lh below it.</p>
+      <p>Second paragraph — exactly one line of space above, from the first paragraph.</p>
+      <h2>Heading — margin-block-start: 2rlh above it</h2>
+      <p>Third paragraph — two root lines of space above, from the heading rule.</p>
+    </div>
+  </section>
+
+</body>
+</html>

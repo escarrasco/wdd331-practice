@@ -1,0 +1,74 @@
+body {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  color: #222;
+}
+
+/* PART 1 — text-wrap */
+h1, h2 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* PART 2 — initial-letter (drop cap) */
+p.dropcap::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+  font-weight: bold;
+  margin-right: 0.15em;
+}
+
+/* PART 3 — line-clamp */
+.card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Card wrapper styling */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  max-width: 380px;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+/* PART 4 — ch unit */
+article p {
+  max-width: 65ch;
+}
+
+/* PART 5 — lh and rlh units */
+.rhythm-demo p {
+  margin-block-end: 1lh;
+}
+
+.rhythm-demo h2 {
+  margin-block-start: 2rlh;
+}
+
+section {
+  border-top: 2px solid #ddd;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+}
+
+section > h2:first-child {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 1.2rem;
+  text-wrap: balance;
+}
