@@ -28,7 +28,8 @@ with a manual theme toggle to override the system preference.
 - [Subgrid and Container Layouts - Card Grid](unit-4/grid-layouts/cards.html)
 - [Subgrid and Container Layouts - Container Demo](unit-4/grid-layouts/advanced/container-demo.htmlcards.html)
 - [Subgrid and Container Layouts - Sticky Demo](unit-4/grid-layouts/advanced/sticky-demo.html)
-- [Masonry for the teaching video](unit-4/mansory-demo/index.html)
+- [Masonry for the teaching video](unit-5/text-properties-font-units-demo/index.html)
+- [Text Properties and Font-Relative Units Demo for the teaching video](unit-4/mansory-demo/index.html)
 ---
 
 ## CSS Architecture
