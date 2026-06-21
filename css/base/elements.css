@@ -1,10 +1,59 @@
 body {
-    font-family: var(--font-body);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     color: var(--color-text);
     background-color: var(--color-bg);
     line-height: 1.6;
    /* padding: var(--spacing-lg);*/
 }
+
+/* ── Headings ───────────────────────────────── */
+
+h1 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-display);
+}
+
+h2 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+h3 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-md);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-sm);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+}
+
+/* ── Body text ──────────────────────────────── */
+
+p {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+}
+
+small,
+.caption {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+}
+
+/* ── Links ──────────────────────────────────── */
 
 a {
     color: var(--color-primary);
@@ -12,4 +61,14 @@ a {
 
 a:hover {
     color: var(--color-primary-hover);
+}
+
+/* ── Code / monospace ───────────────────────── */
+
+code,
+pre,
+kbd,
+samp {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-label);
 }
