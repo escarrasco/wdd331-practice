@@ -1,14 +1,5 @@
-/* ── Web font: Playfair Display ─────────────────────────────────────────────
-   Loaded via Google Fonts. font-display: swap is appended in the URL so text
-   stays readable in the fallback (Georgia, serif) before the font arrives.
-   Only the weights actually used are requested (400 normal, 700 bold).
-───────────────────────────────────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-/* ── Layer order ────────────────────────────────────────────────────────────
-   Declared first so the cascade respects this order regardless of where each
-   @import lands later in the file.
-───────────────────────────────────────────────────────────────────────────── */
 @layer tokens, base, layout, components, utilities;
 
 @import "tokens/colors.css" layer(tokens);
