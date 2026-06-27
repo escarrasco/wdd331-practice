@@ -121,6 +121,28 @@ h2 {
   border: 1px solid ButtonBorder;
 }
 
+.bText {
+  background:Canvas;
+  color:CanvasText;
+}
+.bFace {
+  background:ButtonFace;
+  color:ButtonText;
+}
+.fText {
+  background:Field;
+  color:FieldText;
+}
+.hlText {
+  background:Highlight;
+  color:HighlightText;
+}
+.lText {
+  background:LinkText;
+  color:Canvas;
+}
+
+
 /* TOGGLE BUTTONS */
 .controls {
   position: fixed;
