@@ -56,11 +56,11 @@ small,
 /* ── Links ──────────────────────────────────── */
 
 a {
-    color: var(--color-primary);
+    color: var(--color-link);
 }
 
 a:hover {
-    color: var(--color-primary-hover);
+    color: var(--color-link-hover);
 }
 
 /* ── Code / monospace ───────────────────────── */

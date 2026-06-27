@@ -12,3 +12,130 @@
 @import "components/nav.css" layer(components);
 @import "components/effects.css" layer(components);
 @import "utilities/utilities.css" layer(utilities);
+
+
+@media print {
+    .site-nav,
+    .theme-menu,
+    .site-footer {
+        display: none !important;
+    }
+
+    @page {
+        margin: 2cm 2.5cm;
+        size: letter;
+    }
+
+    body {
+        background: #ffffff;
+        color: #000000;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 11pt;
+        line-height: 1.5;
+    }
+
+    .page-wrapper {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .resume {
+        padding-block: 0;
+        max-width: 100%;
+    }
+
+    .resume__header {
+        background-color: var(--color-accent) !important;
+        color: #ffffff !important;
+        padding: 14pt 16pt;
+        border-radius: 0;
+        margin-bottom: 18pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .resume__name {
+        font-size: 22pt;
+        color: #ffffff !important;
+        margin-bottom: 4pt;
+    }
+
+    .resume__contact {
+        font-size: 9pt;
+        color: rgba(255,255,255,0.85) !important;
+    }
+
+    .resume__contact a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: rgba(255,255,255,0.7);
+    }
+
+    .resume__section {
+        margin-bottom: 14pt;
+        break-inside: avoid;
+    }
+
+    .resume__section-title {
+        font-size: 10pt;
+        color: #000000;
+        border-bottom: 1pt solid #888888;
+        margin-bottom: 8pt;
+        padding-bottom: 2pt;
+    }
+
+    .resume__entry {
+        break-inside: avoid;
+        margin-bottom: 10pt;
+    }
+
+    .resume__entry-title {
+        font-size: 11pt;
+        color: #000000;
+    }
+
+    .resume__entry-meta {
+        font-size: 9pt;
+        color: #444444;
+    }
+
+    .resume__list li,
+    .resume__list li code,
+    p {
+        font-size: 10pt;
+        color: #000000;
+    }
+
+    .resume__list li code {
+        background: none;
+        border: none;
+        font-family: 'Courier New', monospace;
+    }
+
+    .resume__skills {
+        gap: 4pt 14pt;
+    }
+
+    .resume__skill-row dt,
+    .resume__skill-row dd {
+        font-size: 10pt;
+        color: #000000;
+    }
+
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #555555;
+        word-break: break-all;
+    }
+
+    a[href^="#"]::after,
+    a[href^="mailto:"]::after {
+        content: none;
+    }
+}

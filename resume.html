@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé – Esther Carrasco Escobar</title>
+    <script src="js/theme-preference.js"></script>
+    <link rel="stylesheet" href="dist/styles.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <a class="site-nav__home" href="index.html">← Home</a>
+        <ul>
+            <li><a href="resume.html" aria-current="page">Résumé</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <details class="theme-menu">
+            <summary class="theme-control">
+                <span class="visually-hidden">Color scheme</span>
+            </summary>
+            <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                <label class="theme-control theme-pick" data-theme-pick="light">
+                    <input name="theme-preference" type="radio" value="light">
+                    <span aria-hidden="true">&#9788;&#65039;</span>
+                    <span class="visually-hidden">Light</span>
+                </label>
+                <label class="theme-control theme-pick" data-theme-pick="system">
+                    <input name="theme-preference" type="radio" value="system" checked>
+                    <span aria-hidden="true">&#9881;&#65039;</span>
+                    <span class="visually-hidden">System default</span>
+                </label>
+                <label class="theme-control theme-pick" data-theme-pick="dark">
+                    <input name="theme-preference" type="radio" value="dark">
+                    <span aria-hidden="true">&#127766;</span>
+                    <span class="visually-hidden">Dark</span>
+                </label>
+            </div>
+        </details>
+    </nav>
+
+    <div class="page-wrapper">
+        <div class="resume" id="resume">
+
+            <header class="resume__header">
+                <h1 class="resume__name">Esther Carrasco Escobar</h1>
+                <p class="resume__contact">
+                    Santa Cruz de la Sierra, Bolivia
+                    &bull; <a href="mailto:esther@example.com">esther@example.com</a>
+                    &bull; <a href="https://github.com/esthercarrasco" target="_blank">github.com/esthercarrasco</a>
+                </p>
+            </header>
+
+            <section class="resume__section">
+                <h2 class="resume__section-title">Summary</h2>
+                <p>
+                    Applied Technology student with a focus on backend development and
+                    a growing command of advanced CSS. Comfortable working across the
+                    full stack, with particular interest in clean system design, API
+                    architecture, and performance-conscious frontend work.
+                </p>
+            </section>
+
+            <section class="resume__section">
+                <h2 class="resume__section-title">Education</h2>
+
+                <div class="resume__entry">
+                    <div class="resume__entry-header">
+                        <h3 class="resume__entry-title">B.S. Applied Technology</h3>
+                        <span class="resume__entry-meta">Brigham Young University – Idaho &bull; 2020 – Present</span>
+                    </div>
+                    <ul class="resume__list">
+                        <li>Coursework in web development, databases, networking, and software design.</li>
+                        <li>Currently studying Advanced CSS (WDD 331R) with focus on design systems, print stylesheets, and modern layout techniques.</li>
+                    </ul>
+                </div>
+
+                <div class="resume__entry">
+                    <div class="resume__entry-header">
+                        <h3 class="resume__entry-title">High School Diploma</h3>
+                        <span class="resume__entry-meta">Colegio Instituto Americano &bull; La Paz, Bolivia &bull; 2006</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume__section">
+                <h2 class="resume__section-title">Project Experience</h2>
+
+                <div class="resume__entry">
+                    <div class="resume__entry-header">
+                        <h3 class="resume__entry-title">Practice Site – Advanced CSS Design System</h3>
+                        <span class="resume__entry-meta">Personal Project &bull; 2026</span>
+                    </div>
+                    <ul class="resume__list">
+                        <li>Built and maintained a multi-page practice site demonstrating CSS custom properties, cascade layers, and modular token architecture.</li>
+                        <li>Implemented a fluid type scale using <code>clamp()</code> and a color system that adapts to light and dark themes via <code>light-dark()</code>.</li>
+                        <li>Applied CSS Grid (subgrid, container queries, masonry) and visual effects including glassmorphism and shape-outside demos.</li>
+                    </ul>
+                </div>
+
+                <div class="resume__entry">
+                    <div class="resume__entry-header">
+                        <h3 class="resume__entry-title">Ward Activity Board</h3>
+                        <span class="resume__entry-meta">Course Project &bull; 2026</span>
+                    </div>
+                    <ul class="resume__list">
+                        <li>Designed a card-based community bulletin board using semantic HTML and responsive CSS Grid layout.</li>
+                        <li>Integrated a theme toggle supporting light, dark, and system-preference modes using a radio-button state machine and <code>color-scheme</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="resume__entry">
+                    <div class="resume__entry-header">
+                        <h3 class="resume__entry-title">Editorial &amp; Card Grid Layouts</h3>
+                        <span class="resume__entry-meta">Course Project &bull; 2026</span>
+                    </div>
+                    <ul class="resume__list">
+                        <li>Built an editorial layout with a two-column article-and-aside structure using named grid areas.</li>
+                        <li>Created an auto-filling responsive card grid using <code>auto-fill</code> and <code>minmax()</code>.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="resume__section">
+                <h2 class="resume__section-title">Skills</h2>
+
+                <dl class="resume__skills">
+                    <div class="resume__skill-row">
+                        <dt>Languages</dt>
+                        <dd>HTML, CSS, JavaScript, Python, SQL</dd>
+                    </div>
+                    <div class="resume__skill-row">
+                        <dt>CSS</dt>
+                        <dd>Custom properties, cascade layers, CSS Grid, Flexbox, fluid typography, print stylesheets, container queries</dd>
+                    </div>
+                    <div class="resume__skill-row">
+                        <dt>Tools</dt>
+                        <dd>Git, VS Code, Chrome DevTools, Figma (basic)</dd>
+                    </div>
+                    <div class="resume__skill-row">
+                        <dt>Languages (spoken)</dt>
+                        <dd>Spanish (native), English (professional)</dd>
+                    </div>
+                </dl>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Esther Carrasco Escobar</p>
+    </footer>
+
+</body>
+</html>
