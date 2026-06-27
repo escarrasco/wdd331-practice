@@ -5,23 +5,47 @@
 
 body {
   margin: 0;
-  padding: 2rem;
+  padding: 1.5rem 2rem 6rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 h2 {
   margin: 0 0 1rem;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.45;
+}
+
+/* STATUS BADGE */
+.status-bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: Highlight;
+  color: HighlightText;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.status-label {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.status-bar code {
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .demo-block {
-  border: 1px solid;
-  border-color: ButtonBorder;
+  border: 1px solid ButtonBorder;
   border-radius: 8px;
   padding: 1.5rem;
 }
@@ -34,6 +58,10 @@ h2 {
   border: 1px solid ButtonBorder;
   border-radius: 4px;
   padding: 0.5rem 1rem;
+}
+
+.scroll-box p {
+  margin: 0.4rem 0;
 }
 
 /* CANVAS BACKGROUND */
@@ -78,7 +106,6 @@ h2 {
   cursor: pointer;
 }
 
-
 /* SYSTEM COLORS */
 .color-grid {
   display: flex;
@@ -93,7 +120,6 @@ h2 {
   font-weight: 600;
   border: 1px solid ButtonBorder;
 }
-
 
 /* TOGGLE BUTTONS */
 .controls {
@@ -119,7 +145,8 @@ h2 {
   outline: 2px solid Highlight;
 }
 
+/* FORCING EXPLICIT VALUES
 
-/* FORCING EXPLICIT VALUES (used only in the video demo)*/
-/* .force-light { color-scheme: light; } */
-/* .force-dark  { color-scheme: dark;  } */
+   color-scheme: light   → always light, ignores OS
+   color-scheme: dark    → always dark, ignores OS
+   color-scheme: light dark → follows OS preference */
