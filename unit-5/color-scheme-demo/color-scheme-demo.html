@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="color-scheme" content="light dark">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>color-scheme Demo</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+  <meta name="color-scheme" content="light dark">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>color-scheme Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
     <body>
+
+        <!-- STATUS BADGE -->
+        <div class="status-bar">
+            <span class="status-label">color-scheme:</span>
+            <code id="status-value">light dark — following OS</code>
+        </div>
 
         <!-- SECTION 1: Scrollbar -->
         <section class="demo-block" id="section-scrollbar">
@@ -22,7 +28,7 @@
         <section class="demo-block" id="section-canvas">
             <h2>02 — Canvas Background</h2>
             <div class="canvas-box">
-            This background is controlled by the browser, not by CSS background-color.
+            This background uses the system color <code>Canvas</code> — not a hardcoded hex.
             </div>
         </section>
 
@@ -33,28 +39,22 @@
             <label>Text input
                 <input type="text" placeholder="Type something…">
             </label>
-
             <label>Number
                 <input type="number" value="42">
             </label>
-
             <label>Date
                 <input type="date">
             </label>
-
             <label>Range
                 <input type="range" min="0" max="100" value="60">
             </label>
-
             <label>Checkbox
                 <input type="checkbox" checked> Enabled
             </label>
-
             <label>Radio
                 <input type="radio" name="r" checked> Option A
                 <input type="radio" name="r"> Option B
             </label>
-
             <label>Select
                 <select>
                 <option>Apple</option>
@@ -62,19 +62,15 @@
                 <option>Cherry</option>
                 </select>
             </label>
-
             <label>Textarea
                 <textarea rows="3" placeholder="Write here…"></textarea>
             </label>
-
             <label>Color picker
                 <input type="color" value="#3b82f6">
             </label>
-
             <label>File
                 <input type="file">
             </label>
-
             <button type="button">Button</button>
             </form>
         </section>
@@ -83,25 +79,33 @@
         <section class="demo-block" id="section-system-colors">
             <h2>04 — System Colors</h2>
             <div class="color-grid">
-            <div class="swatch" style="background: Canvas; color: CanvasText;">Canvas / CanvasText</div>
-            <div class="swatch" style="background: ButtonFace; color: ButtonText;">ButtonFace / ButtonText</div>
-            <div class="swatch" style="background: Field; color: FieldText;">Field / FieldText</div>
-            <div class="swatch" style="background: Highlight; color: HighlightText;">Highlight / HighlightText</div>
-            <div class="swatch" style="background: LinkText;">LinkText</div>
+            <div class="swatch" style="background:Canvas;color:CanvasText;">Canvas / CanvasText</div>
+            <div class="swatch" style="background:ButtonFace;color:ButtonText;">ButtonFace / ButtonText</div>
+            <div class="swatch" style="background:Field;color:FieldText;">Field / FieldText</div>
+            <div class="swatch" style="background:Highlight;color:HighlightText;">Highlight / HighlightText</div>
+            <div class="swatch" style="background:LinkText;color:Canvas;">LinkText</div>
             </div>
         </section>
 
         <!-- TOGGLE BUTTONS -->
         <div class="controls">
+            <button onclick="setScheme('light dark')">⚙️ Follow OS</button>
             <button onclick="setScheme('light')">☀️ Force Light</button>
             <button onclick="setScheme('dark')">🌙 Force Dark</button>
-            <button onclick="setScheme('light dark')">⚙️ Follow OS</button>
         </div>
 
         <script>
+            const statusEl = document.getElementById('status-value');
+
             function setScheme(value) {
-            // toggles color-scheme on the <html> element
             document.documentElement.style.colorScheme = value;
+            if (value === 'light dark') {
+                statusEl.textContent = 'light dark — following OS';
+            } else if (value === 'light') {
+                statusEl.textContent = 'light — forced';
+            } else {
+                statusEl.textContent = 'dark — forced';
+            }
             }
         </script>
 
