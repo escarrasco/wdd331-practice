@@ -133,12 +133,18 @@
     a[href]::after {
         content: " (" attr(href) ")";
         font-size: 8pt;
-        color: #555555;
+        color: #fff;
         word-break: break-all;
     }
 
     a[href^="#"]::after,
-    a[href^="mailto:"]::after {
+    a[href^="mailto:"]::after,
+    .resume__header a::after {
         content: none;
+    }
+
+    .resume__header a {
+        text-decoration: none;
+        color: #ffffff;
     }
 }
