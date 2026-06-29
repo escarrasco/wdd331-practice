@@ -2,13 +2,7 @@
    These values should be referenced by every other layer. */
 :root {
     /* TODO: Define spacing, font, radius, and shadow tokens here */
-    /*old space
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    */
+   
     /* Unit3 part A New Spacing */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -16,11 +10,11 @@
     --spacing-lg: 24px;
     --spacing-xl: 32px;
 
-    /* ─────────────────────────────────────────
+    /* 
        FONT FAMILIES
        Custom web font: Playfair Display (headings)
        via Google Fonts — declared in main.css with font-display: swap
-    ───────────────────────────────────────── */
+     */
     --font-family-heading: 'Playfair Display', Georgia, serif;
     --font-family-body:    'Verdana', system-ui, sans-serif;
     --font-family-mono:    'Courier New', monospace;
@@ -30,59 +24,21 @@
     --font-body:    var(--font-family-body);
     --font-mono:    var(--font-family-mono);
 
-    /* ─────────────────────────────────────────
-       MODULAR TYPE SCALE  — Perfect Fourth (×1.333)
-       Base: 1rem (16px)
-
-       Step   px (approx)   rem
-       --fs-1    9px         0.563rem   ← fixed (small label)
-       --fs-2   12px         0.75rem    ← fixed (caption)
-       --fs-3   16px         1rem       ← base body (fixed)
-       --fs-4   21px         1.333rem   ← fluid: lg body / sm heading
-       --fs-5   28px         1.777rem   ← fluid: section heading
-       --fs-6   37px         2.369rem   ← fluid: page heading
-       --fs-7   50px         3.157rem   ← fluid: display / hero
-
-       Fluid math: viewport range 375px → 1280px (23.4375rem → 80rem)
-       slope  = (max - min) / (maxVw - minVw)
-       intercept = min - slope × minVw
-       preferred = slope × 100vi + intercept
-    ───────────────────────────────────────── */
+    /* MODULAR TYPE SCALE  — Perfect Fourth (×1.333)
+       Base: 1rem (16px) */
 
     /* Fixed steps (small, no scaling needed) */
     --fs-1: 0.563rem;   /* ~9px  */
     --fs-2: 0.75rem;    /* ~12px */
     --fs-3: 1rem;       /* 16px  — body base */
 
-    /* Fluid step 4: min 1.1rem (17.6px) → max 1.333rem (21.3px)
-       slope  = (1.333 - 1.1) / (80 - 23.4375) = 0.233 / 56.5625 ≈ 0.004119
-       intercept = 1.1 - 0.004119 × 23.4375 ≈ 1.004rem
-    */
+    /* Fluid steps */
     --fs-4: clamp(1.1rem, 0.4119vi + 1.004rem, 1.333rem);
-
-    /* Fluid step 5: min 1.4rem (22.4px) → max 1.777rem (28.4px)
-       slope  = (1.777 - 1.4) / 56.5625 ≈ 0.006664
-       intercept = 1.4 - 0.006664 × 23.4375 ≈ 1.244rem
-    */
     --fs-5: clamp(1.4rem, 0.6664vi + 1.244rem, 1.777rem);
-
-    /* Fluid step 6: min 1.7rem (27.2px) → max 2.369rem (37.9px)
-       slope  = (2.369 - 1.7) / 56.5625 ≈ 0.011826
-       intercept = 1.7 - 0.011826 × 23.4375 ≈ 1.423rem
-    */
     --fs-6: clamp(1.7rem, 1.1826vi + 1.423rem, 2.369rem);
-
-    /* Fluid step 7: min 2rem (32px) → max 3.157rem (50.5px)
-       slope  = (3.157 - 2) / 56.5625 ≈ 0.020453
-       intercept = 2 - 0.020453 × 23.4375 ≈ 1.521rem
-    */
     --fs-7: clamp(2rem, 2.0453vi + 1.521rem, 3.157rem);
 
-    /* ─────────────────────────────────────────
-       SEMANTIC ROLE TOKENS
-       Components consume these, never raw scale steps.
-       Swap scale steps here; nothing else changes.
-    ───────────────────────────────────────── */
+    /* SEMANTIC ROLE TOKENS */
     --font-size-caption:     var(--fs-1);
     --font-size-label:       var(--fs-2);
     --font-size-body:        var(--fs-3);
@@ -100,37 +56,25 @@
     --font-size-hero:    var(--font-size-display);
     --font-size-section: var(--font-size-heading-lg);
 
-    /* ─────────────────────────────────────────
-       LINE HEIGHTS  — tuned by role
-    ───────────────────────────────────────── */
+    /* LINE HEIGHTS  — tuned by role */
     --line-height-caption:  1.4;   /* tight: small labels */
     --line-height-body:     1.7;   /* open: prose breathes */
     --line-height-heading:  1.25;  /* moderate: multi-line heads hold together */
     --line-height-display:  1.1;   /* tight: hero/display sizes */
 
-    /* ─────────────────────────────────────────
-       FONT WEIGHTS
-    ───────────────────────────────────────── */
+    /* FONT WEIGHTS */
     --font-weight-normal: 400;
     --font-weight-bold: 700;
-    --line-height-body: 1.7;
-    --line-height-heading: 1.25;
-    
-    /*unit3 part A typography*/
-    --font-family-sans: system-ui, sans-serif;
-    --font-family-mono: monospace;
-    --font-size-sm: 1.4rem;
-    --font-size-md: 1.6rem;
-    --font-size-lg: 1.8rem;
     
     /*borders*/
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 2rem;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
 
     /*shadows*/
-    --shadow-sm: 0 1px 4px rgba(44, 36, 22, 0.08);
-    --shadow-md: 0 4px 16px rgba(44, 36, 22, 0.14);
+    --shadow-sm:    0 1px 2px 0 var(--shadow-color);
+    --shadow-md:    0 1px 3px 0 var(--shadow-color);
+
     /*for unit 3 visual effects*/
     /*two-layer stacks*/
     --shadow-card:   0 1px 3px var(--shadow-color),
@@ -142,23 +86,14 @@
     /*For the glass panel*/
     --shadow-glass:  0 8px 32px oklch(0 0 0 / 0.22);
 
-
     --focus-ring: 2px solid var(--color-primary);
     --focus-ring-offset: 2px;
+    --outline-width:     2px;
 
     /*transition*/
     --transition-fast: 150ms ease;
-
-    /*unit 3 part A*/
-    /* Radii */
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
-    /* Transitions */
     --transition-base: 0.2s ease;
     /* Icons */
     --icon-size-sm: 24px;
     --icon-size-md: 32px;
-    /* Focus */
-    --outline-width: 2px;
 }
