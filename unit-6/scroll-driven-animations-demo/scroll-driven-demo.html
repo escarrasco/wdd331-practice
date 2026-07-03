@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll-Driven Animations Demo</title>
+<link rel="stylesheet" href="scroll-driven.css">
+</head>
+<body>
+
+  <!-- Barra de progreso: usa scroll() -->
+  <div class="scroll-progress-bar"></div>
+
+  <header class="hero">
+    <h1>Scroll-Driven Animations</h1>
+    <p>Haz scroll hacia abajo para ver la barra de progreso llenarse<br>
+       y las tarjetas aparecer una por una.</p>
+  </header>
+
+  <main>
+    <section class="reveal-card">
+      <h2>Card One</h2>
+      <p>Esta tarjeta usa <code>view()</code> y aparece con fade + slide up
+      cuando entra en el viewport.</p>
+    </section>
+
+    <section class="reveal-card">
+      <h2>Card Two</h2>
+      <p>Cada tarjeta tiene su propia línea de tiempo independiente.
+      Baja lentamente para ver cómo cada una dispara su animación por separado.</p>
+    </section>
+
+    <section class="reveal-card">
+      <h2>Card Three</h2>
+      <p>Gracias a <code>animation-range: entry</code>, la animación termina
+      antes de que la tarjeta esté completamente visible.</p>
+    </section>
+
+    <section class="reveal-card">
+      <h2>Card Four</h2>
+      <p>Si el usuario prefiere "reduced motion", esta tarjeta aparece
+      directamente visible, sin animación.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Fin del demo — vuelve a subir para ver la barra de progreso vaciarse.</p>
+  </footer>
+
+</body>
+</html>
