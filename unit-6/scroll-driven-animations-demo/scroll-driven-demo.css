@@ -35,6 +35,10 @@ main {
   padding: 0 2rem;
 }
 
+.spacer {
+  height: 20vh;
+}
+
 footer {
   text-align: center;
   padding: 6rem 2rem;
