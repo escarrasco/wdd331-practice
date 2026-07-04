@@ -77,7 +77,7 @@ footer {
   background: #1e293b;
   border-radius: 12px;
   padding: 2rem;
-  margin-block: 3rem;
+  margin-block: 8rem;
   border: 1px solid #334155;
 
   opacity: 1;
@@ -100,7 +100,7 @@ footer {
   @keyframes card-reveal {
     from {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(80px);
     }
     to {
       opacity: 1;
