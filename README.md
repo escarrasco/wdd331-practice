@@ -33,6 +33,8 @@ with a manual theme toggle to override the system preference.
 - [Resume with Print CSS and Form - Contact Form](contact.html)
 - [Resume with Print CSS and Form - Resume](resume.html)
 - [color-scheme Deep Dive Demo for the teaching video](unit-5/color-scheme-demo/color-scheme-demo.html)
+- [Meaningful Motion with Reduced-Motion Support](unit-6/motion/index.html)
+- [Scroll-Driven Animation Demo for the teaching video](unit-6/scroll-driven-animations-demo/scroll-driven-demo.html)
 ---
 
 ## CSS Architecture
