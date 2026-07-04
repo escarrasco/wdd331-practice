@@ -1,3 +1,6 @@
+/* ============================================
+   BASIC RESET AND GENERAL STYLES
+   ============================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +15,7 @@ body {
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +41,13 @@ footer {
   color: #94a3b8;
 }
 
-/* 1) scroll() -> BARRA DE PROGRESO */
+/* ============================================
+   1) scroll() -> PROGRESS BAR
+   This animation is driven by how far the whole
+   page (root) has been scrolled.
+   It replaces the pattern:
+   window.addEventListener('scroll', ...)
+   ============================================ */
 @keyframes progress-fill {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
@@ -59,7 +68,11 @@ footer {
   animation-timeline: scroll(root);
 }
 
-/* 2) view() -> TARJETAS QUE APARECEN AL ENTRAR */
+/* ============================================
+   2) view() -> CARDS THAT APPEAR ON ENTRY
+   Default state: fully visible.
+   This is the base for the fallback / reduced motion.
+   ============================================ */
 .reveal-card {
   background: #1e293b;
   border-radius: 12px;
@@ -76,6 +89,12 @@ footer {
   color: #38bdf8;
 }
 
+/* The real animation ONLY runs if the user did
+   NOT ask for "reduced motion". This block also
+   works as an automatic fallback for Firefox,
+   where animation-timeline is not enabled by
+   default yet: the property is ignored and the
+   card stays in its normal visible state above. */
 @media (prefers-reduced-motion: no-preference) {
 
   @keyframes card-reveal {
