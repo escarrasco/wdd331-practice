@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Icons Demo</title>
+  <!-- Verify this relative path matches your site's actual folder depth -->
+  <link rel="stylesheet" href="../../dist/styles.css">
+  <link rel="stylesheet" href="css-icons.css">
+</head>
+<body>
+      <!-- NAV -->
+    <nav class="site-nav">
+        <a href="../../index.html">&larr; Home</a>
+        <ul>
+            <li><a href="#" aria-current="page">Study</a></li>
+            <li><a href="#">Bookmarks</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">Temples</a></li>
+        </ul>
+    <details class="theme-menu">
+            <summary class="theme-control">
+                <span class="visually-hidden">Color scheme</span>
+            </summary>
+            <div class="theme-extra" role="group" aria-label="Choose color scheme">
+                <label class="theme-control theme-pick" data-theme-pick="light">
+                    <input name="theme-preference" type="radio" value="light">
+                    <span aria-hidden="true">&#9788;&#65039;</span>
+                    <span class="visually-hidden">Light</span>
+                </label>
+                <label class="theme-control theme-pick" data-theme-pick="system">
+                    <input name="theme-preference" type="radio" value="system" checked>
+                    <span aria-hidden="true">&#9881;&#65039;</span>
+                    <span class="visually-hidden">System default</span>
+                </label>
+                <label class="theme-control theme-pick" data-theme-pick="dark">
+                    <input name="theme-preference" type="radio" value="dark">
+                    <span aria-hidden="true">&#127766;</span>
+                    <span class="visually-hidden">Dark</span>
+                </label>
+            </div>
+        </details>
+    </nav>
+
+  <h1>Pure CSS Icons</h1>
+  <p>Three icons built almost entirely with CSS &mdash; borders, pseudo-elements, and transforms &mdash; plus one SVG example at the bottom for comparison.</p>
+
+  <section class="icon-showcase">
+
+    <div class="icon-card">
+      <span class="arrow-down" aria-hidden="true"></span>
+      <p>Triangle (border trick)</p>
+    </div>
+
+    <div class="icon-card">
+      <span class="chevron-right" aria-hidden="true"></span>
+      <p>Chevron (rotated borders)</p>
+    </div>
+
+    <div class="icon-card">
+      <button
+        class="hamburger-btn"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-label="Toggle menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <p>Hamburger &rarr; Close (::before + ::after)</p>
+    </div>
+
+  </section>
+
+  <section class="svg-comparison">
+    <h2>When SVG wins instead</h2>
+    <p>
+      A logo like this has curves and multiple paths &mdash; way beyond what
+      borders and pseudo-elements can draw. This is a job for SVG, not CSS.
+    </p>
+    <svg class="logo-example" viewBox="0 0 100 100" width="60" height="60" aria-hidden="true">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="6" />
+      <path d="M35 55 Q50 25 65 55 Q50 70 35 55 Z" fill="currentColor" />
+    </svg>
+  </section>
+
+  <script>
+    const btn = document.getElementById('menuToggle');
+    const icon = btn.querySelector('.hamburger');
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      icon.classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>
