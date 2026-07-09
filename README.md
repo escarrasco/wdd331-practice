@@ -36,7 +36,9 @@ with a manual theme toggle to override the system preference.
 - [Meaningful Motion with Reduced-Motion Support](unit-6/motion/index.html)
 - [Scroll-Driven Animation Demo for the teaching video](unit-6/scroll-driven-animations-demo/scroll-driven-demo.html)
 ---
-
+- [Accessible SVG Icon System on the Unit-6 Part A Page](unit-6/motion/index.html)
+- [Pure CSS Icons Demo for the teaching video](unit-6/css-icons/index.html)
+---
 ## CSS Architecture
 
 Styles are organized into a layered folder structure inside `css/`. The layer order is declared in `main.css` and enforced by the build tool.

@@ -13,6 +13,7 @@
 @import "components/effects.css" layer(components);
 @import "components/resume.css" layer(components);
 @import "components/contact.css" layer(components);
+@import "components/icons.css" layer(components);
 
 @import "utilities/utilities.css" layer(utilities);
 
