@@ -1,0 +1,18 @@
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+
+/* Icons that sit inline with text */
+.icon--inline {
+    margin-inline-end: 0.35em;
+}
+
+/* Standalone icon-only */
+.icon--control {
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+}
