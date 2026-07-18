@@ -14,6 +14,26 @@ every push to main.
 The site supports **light and dark mode** automatically via `prefers-color-scheme`,
 with a manual theme toggle to override the system preference.
 
+## Portfolio Launch (Unit 7)
+
+For the capstone, `index.html` was rebuilt from a flat assignment list into an
+actual portfolio front door:
+
+- **Hero / visual landing** — a personal intro with a photo backdrop and two
+  calls to action (`See featured work`, `View résumé`), reusing the `.hero`
+  component built in Unit 3 instead of a plain page header.
+- **Featured Work** — three cards (Editorial Grid, Meaningful Motion, Visual
+  Effects) that point to my strongest pages, so a visitor doesn't have to dig
+  through every assignment to see them.
+- **Coursework grouped by unit theme** — instead of one long list, every
+  assignment now sits inside a `unit-section` labeled with that unit's course
+  theme (e.g. "Layout Mastery," "Motion, SVG, and Portfolio Polish") with a
+  one-line intro, so the grid communicates *why* the project exists, not just
+  its name.
+- **Résumé/contact CTA** — a `.glass-section` panel at the bottom of the
+  homepage promotes the résumé and contact page as a "front door," since those
+  are the two pages most useful to a hiring manager.
+
 ## Pages
 
 - [Home](index.html)
@@ -51,6 +71,13 @@ css/
 ├── components/
 │   └── card.css          # Assignment card component
 |   └── theme-toggle.css  # Disclosure widget with three radio options: light, system, and dark
+│   ├── nav.css           # Site navigation, used on every page
+│   ├── effects.css       # Hero, card-section, glass-section, icon-section patterns (Unit 3)
+│   ├── resume.css        # Résumé page styles
+│   ├── contact.css       # Contact form styles
+│   ├── icons.css         # SVG icon sizing/utility classes
+│   └── homepage.css      # Buttons, featured-work cards, unit-section headings (Portfolio Launch)
+
 ├── layout/
 │   └── primary.css       # Page wrapper, header, grid, footer
 ├── tokens/
