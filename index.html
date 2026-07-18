@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,26 +101,88 @@
         </details>
     </nav>
     <div class="page-wrapper" id="top">
- 
-        <header class="site-header">
-            <p class="course-label">WDD 331R — Advanced CSS</p>
-            <h1>Esther Carrasco Escobar</h1>
+
+        <!-- HERO: personal intro + visual landing (Portfolio Launch overhaul) -->
+        <header class="hero">
+            <img
+                class="hero-image"
+                src="img/esther-profile.jpg"
+                alt=""
+            >
+            <div class="hero-content">
+                <p class="course-label">WDD 331R &mdash; Advanced CSS</p>
+                <h1>Esther Carrasco Escobar</h1>
+                <p>
+                    I'm from Santa Cruz, Bolivia, studying Applied Technology. I gravitate toward
+                    backend work, mostly because I've historically spent too long chasing a
+                    good-looking frontend &mdash; this course is the semester I fixed that. Every
+                    project below shares one token system, one component library, and one
+                    build pipeline.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn--primary" href="#featured-work">See featured work</a>
+                    <a class="btn btn--ghost" href="resume.html">View résumé</a>
+                </div>
+            </div>
         </header>
- 
-        <p class="site-bio">
-            I'm from Santa Cruz, Bolivia. My major is Applied Technology. My experience in the area is limited to the courses I've been taking so far. I like backend development better, but just because I take too much time trying to make the design eye-appealing when I'm working on frontend dev. I hope this course helps deepen my knowledge of CSS.
-	        This is my Practice Site for WDD 331R: Advanced CSS.
-        </p>
- 
+
         <main>
-            <h2 class="section-title">Assignments</h2>
-            <div class="assignments-grid">
- 
+            <!-- FEATURED WORK: substantial improvement #1 -->
+            <section class="featured-section" id="featured-work">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="featured-section__intro">
+                    Three projects that best show what this semester was actually about:
+                    layout systems, purposeful motion, and visual effects built entirely with tokens.
+                </p>
+                <div class="featured-grid">
+                    <a class="featured-card" href="unit-4/grid-layouts/editorial.html">
+                        <img class="featured-card__media" src="https://picsum.photos/seed/editorial-grid/500/300" alt="">
+                        <div class="featured-card__body">
+                            <span class="featured-card__eyebrow">Unit 4 &mdash; Layout Mastery</span>
+                            <h3 class="featured-card__title">Editorial Grid Layout</h3>
+                            <p class="featured-card__desc">A magazine-style layout built with CSS Grid, no frameworks involved.</p>
+                            <span class="featured-card__link">View project &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="featured-card" href="unit-6/motion/index.html">
+                        <img class="featured-card__media" src="https://picsum.photos/seed/meaningful-motion/500/300" alt="">
+                        <div class="featured-card__body">
+                            <span class="featured-card__eyebrow">Unit 6 &mdash; Motion &amp; Polish</span>
+                            <h3 class="featured-card__title">Meaningful Motion</h3>
+                            <p class="featured-card__desc">Purposeful animation that fully respects prefers-reduced-motion.</p>
+                            <span class="featured-card__link">View project &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="featured-card" href="unit-3/visual-effects/index.html">
+                        <img class="featured-card__media" src="https://picsum.photos/seed/visual-fx/500/300" alt="">
+                        <div class="featured-card__body">
+                            <span class="featured-card__eyebrow">Unit 3 &mdash; Color &amp; Theming</span>
+                            <h3 class="featured-card__title">Visual Effects Showcase</h3>
+                            <p class="featured-card__desc">The hero, card, and glass-panel patterns this homepage reuses, in their original context.</p>
+                            <span class="featured-card__link">View project &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- COURSEWORK: grouped by unit theme -->
+            <h2 class="section-title">Coursework by Unit</h2>
+            <p class="featured-section__intro">
+                Every assignment from the semester, organized under the theme it belongs to.
+                Teaching-video demos are labeled.
+            </p>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 1</span>
+                    <h3 class="unit-section__title">Foundations and the Modern CSS Landscape</h3>
+                </div>
+                <p class="unit-section__intro">Where the site's design system starts: custom properties and native CSS nesting instead of a preprocessor.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-1/custom-properties/index.html">
                     <span class="card__unit">Unit 1</span>
                     <span class="card__title">Custom Properties &amp; Nesting</span>
-                    <p class="card__desc">
-                    </p>
+                    <p class="card__desc">The first token system and nesting patterns this whole site is built on.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -139,12 +201,20 @@
                         </svg>
                     </span>
                 </a>
- 
+                </div>
+            </section>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 2</span>
+                    <h3 class="unit-section__title">Cascade Control, Architecture, and Tooling</h3>
+                </div>
+                <p class="unit-section__intro">The cascade layers, PostCSS build, and folder architecture that keep every page below in order.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-2/layered-components/">
                     <span class="card__unit">Unit 2</span>
                     <span class="card__title">Layered Components</span>
-                    <p class="card__desc">
-                    </p>
+                    <p class="card__desc">@layer-based architecture with a PostCSS build pipeline.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -163,12 +233,10 @@
                         </svg>
                     </span>
                 </a>
-
                 <a class="card" href="unit-2/custom-media-demo/">
                     <span class="card__unit">Unit 2</span>
-                    <span class="card__title">Custom Media Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Custom Media Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">@custom-media queries explained for the unit's teaching video.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -187,11 +255,20 @@
                         </svg>
                     </span>
                 </a>
+                </div>
+            </section>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 3</span>
+                    <h3 class="unit-section__title">Color, Theming, and Visual Effects</h3>
+                </div>
+                <p class="unit-section__intro">Light/dark theming with light-dark(), oklch color ramps, shadows, gradients, and blend modes.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-3/visual-effects/">
                     <span class="card__unit">Unit 3</span>
                     <span class="card__title">Visual Effects</span>
-                    <p class="card__desc">
-                    </p>
+                    <p class="card__desc">Layered shadows, gradients, and filters &mdash; the same hero and card patterns reused on this homepage.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -212,9 +289,8 @@
                 </a>
                 <a class="card" href="unit-3/shape-outside-demo/">
                     <span class="card__unit">Unit 3</span>
-                    <span class="card__title">Shape-outside Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Shape-outside Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">Text wrapping around a circular image using shape-outside.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -233,11 +309,20 @@
                         </svg>
                     </span>
                 </a>
+                </div>
+            </section>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 4</span>
+                    <h3 class="unit-section__title">Layout Mastery</h3>
+                </div>
+                <p class="unit-section__intro">Grid, subgrid, container queries, and sticky positioning &mdash; the layout techniques behind this page's responsive sections.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-4/grid-layouts/editorial.html">
                     <span class="card__unit">Unit 4 Part A</span>
-                    <span class="card__title">Grid Layouts - Editorial Layout</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Grid Layouts &mdash; Editorial Layout</span>
+                    <p class="card__desc">A magazine-style editorial grid built with CSS Grid.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -258,9 +343,8 @@
                 </a>
                 <a class="card" href="unit-4/grid-layouts/cards.html">
                     <span class="card__unit">Unit 4 Part A</span>
-                    <span class="card__title">Grid Layouts - Card Grid</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Grid Layouts &mdash; Card Grid</span>
+                    <p class="card__desc">A responsive auto-fit card grid with no media queries.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -281,32 +365,8 @@
                 </a>
                 <a class="card" href="unit-4/aspect-ratio-object-fit/index.html">
                     <span class="card__unit">Unit 4 Part A</span>
-                    <span class="card__title">Aspect-ratio & Object-fit Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
-                    <span class="card__status card__status--open">
-                        <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
-                             fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round"
-                             aria-hidden="true" focusable="false">
-                            <use href="#icon-check-circle-2"></use>
-                        </svg>
-                        Complete
-                    </span>
-                    <span class="card__arrow">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
-                             fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round"
-                             aria-hidden="true" focusable="false">
-                            <use href="#icon-arrow-right"></use>
-                        </svg>
-                    </span>
-                </a>
-                <a class="card" href="unit-4/grid-layouts/cards.html">
-                    <span class="card__unit">Unit 4 Part B</span>
-                    <span class="card__title">Subgrid and Container Layouts - Card Grid</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Aspect-ratio &amp; Object-fit Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">Keeping media proportioned without layout shift.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -327,9 +387,8 @@
                 </a>
                 <a class="card" href="unit-4/grid-layouts/advanced/container-demo.html">
                     <span class="card__unit">Unit 4 Part B</span>
-                    <span class="card__title">Subgrid and Container Layouts - Container Demo</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Subgrid &amp; Container Layouts &mdash; Container Demo</span>
+                    <p class="card__desc">A component that adapts to its container, not the viewport.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -350,9 +409,8 @@
                 </a>
                 <a class="card" href="unit-4/grid-layouts/advanced/sticky-demo.html">
                     <span class="card__unit">Unit 4 Part B</span>
-                    <span class="card__title">Subgrid and Container Layouts - Sticky Demo</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Subgrid &amp; Container Layouts &mdash; Sticky Demo</span>
+                    <p class="card__desc">Section headers that stick, then get pushed off by the next one.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -373,9 +431,8 @@
                 </a>
                 <a class="card" href="unit-4/masonry-demo/index.html">
                     <span class="card__unit">Unit 4 Part B</span>
-                    <span class="card__title">Masonry Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Masonry Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">A Pinterest-style masonry layout for the teaching video.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -394,34 +451,20 @@
                         </svg>
                     </span>
                 </a>
+                </div>
+            </section>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 5</span>
+                    <h3 class="unit-section__title">Typography, Print, and Forms</h3>
+                </div>
+                <p class="unit-section__intro">Fluid type scales, print stylesheets, and accessible forms &mdash; used directly in the résumé and contact pages below.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-5/text-properties-font-units-demo/index.html">
                     <span class="card__unit">Unit 5 Part A</span>
-                    <span class="card__title">Text Properties and Font-Relative Units Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
-                    <span class="card__status card__status--open">
-                        <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
-                             fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round"
-                             aria-hidden="true" focusable="false">
-                            <use href="#icon-check-circle-2"></use>
-                        </svg>
-                        Complete
-                    </span>
-                    <span class="card__arrow">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
-                             fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round"
-                             aria-hidden="true" focusable="false">
-                            <use href="#icon-arrow-right"></use>
-                        </svg>
-                    </span>
-                </a>
-                <a class="card" href="contact.html">
-                    <span class="card__unit">Unit 5 Part B</span>
-                    <span class="card__title">Resume with Print CSS and Form - Contact Form</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Text Properties &amp; Font-Relative Units <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">text-wrap, clamp(), and font-relative units in practice.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -442,9 +485,30 @@
                 </a>
                 <a class="card" href="resume.html">
                     <span class="card__unit">Unit 5 Part B</span>
-                    <span class="card__title">Resume with Print CSS and Form - Resume</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Résumé</span>
+                    <p class="card__desc">A print-ready résumé with a dedicated @media print stylesheet.</p>
+                    <span class="card__status card__status--open">
+                        <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
+                             fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true" focusable="false">
+                            <use href="#icon-check-circle-2"></use>
+                        </svg>
+                        Complete
+                    </span>
+                    <span class="card__arrow">
+                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24"
+                             fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round"
+                             aria-hidden="true" focusable="false">
+                            <use href="#icon-arrow-right"></use>
+                        </svg>
+                    </span>
+                </a>
+                <a class="card" href="contact.html">
+                    <span class="card__unit">Unit 5 Part B</span>
+                    <span class="card__title">Contact Form</span>
+                    <p class="card__desc">An accessible contact form with client-side validation states.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -465,9 +529,8 @@
                 </a>
                 <a class="card" href="unit-5/color-scheme-demo/color-scheme-demo.html">
                     <span class="card__unit">Unit 5 Part B</span>
-                    <span class="card__title">color-scheme Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">color-scheme Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">A deep dive into the color-scheme property for the teaching video.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -486,11 +549,20 @@
                         </svg>
                     </span>
                 </a>
+                </div>
+            </section>
+
+            <section class="unit-section">
+                <div class="unit-section__header">
+                    <span class="unit-section__number">Unit 6</span>
+                    <h3 class="unit-section__title">Motion, SVG, and Portfolio Polish</h3>
+                </div>
+                <p class="unit-section__intro">Meaningful motion, scroll-driven animation, and the SVG icon system that powers the navigation and cards on this very page.</p>
+                <div class="assignments-grid">
                 <a class="card" href="unit-6/motion/index.html">
                     <span class="card__unit">Unit 6 Part A</span>
                     <span class="card__title">Meaningful Motion with Reduced-Motion Support</span>
-                    <p class="card__desc">
-                    </p>
+                    <p class="card__desc">Purposeful animation that respects prefers-reduced-motion.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -511,9 +583,8 @@
                 </a>
                 <a class="card" href="unit-6/scroll-driven-animations-demo/scroll-driven-demo.html">
                     <span class="card__unit">Unit 6 Part A</span>
-                    <span class="card__title">Scroll-Driven Animation Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Scroll-Driven Animation Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">A scroll-linked progress bar and reveal animation using scroll().</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -532,11 +603,10 @@
                         </svg>
                     </span>
                 </a>
-                <a class="card" href="index.html">
+                <a class="card" href="index.html#top">
                     <span class="card__unit">Unit 6 Part B</span>
                     <span class="card__title">Accessible SVG Icon System</span>
-                    <p class="card__desc">
-                    </p>
+                    <p class="card__desc">The sprite-sheet icon system live in this page's nav and cards.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -557,9 +627,8 @@
                 </a>
                 <a class="card" href="unit-6/css-icons/index.html">
                     <span class="card__unit">Unit 6 Part B</span>
-                    <span class="card__title">Pure CSS Icons Demo for the teaching video</span>
-                    <p class="card__desc">
-                    </p>
+                    <span class="card__title">Pure CSS Icons Demo <span class="card__badge">Teaching video</span></span>
+                    <p class="card__desc">Icons drawn with pure CSS, no SVG or icon font, for the teaching video.</p>
                     <span class="card__status card__status--open">
                         <svg class="icon icon--inline" viewBox="0 0 24 24" width="24" height="24"
                              fill="none" stroke="currentColor" stroke-width="2"
@@ -578,11 +647,34 @@
                         </svg>
                     </span>
                 </a>
-            </div>
+                </div>
+            </section>
+
+            <!-- RÉSUMÉ / CONTACT CTA -->
+            <section class="glass-section">
+                <div class="glass-background">
+                    <img class="glass-bg-image" src="https://picsum.photos/seed/portfolio-cta/1200/500" alt="">
+                </div>
+                <div class="glass-panel">
+                    <h2>Want the short version?</h2>
+                    <p>
+                        My résumé covers the same skills as this site.
+                    </p>
+                    <div class="glass-panel__actions">
+                        <a class="btn btn--primary" href="resume.html">View résumé</a>
+                        <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+                    </div>
+                </div>
+            </section>
+
         </main>
- 
+
         <footer class="site-footer">
-            <p>Esther Carrasco Escobar &mdash; WDD 331R Advanced CSS &mdash; BYU–Idaho</p>
+            <p>Esther Carrasco Escobar &mdash; WDD 331R Advanced CSS &mdash; BYU&ndash;Idaho</p>
+            <p>
+                <a href="resume.html">Résumé</a> &middot;
+                <a href="contact.html">Contact</a>
+            </p>
             <p>
                 <a href="#top" aria-label="Back to top">
                     <svg class="icon icon--control" viewBox="0 0 24 24" width="24" height="24"
@@ -594,7 +686,7 @@
                 </a>
             </p>
         </footer>
- 
+
     </div>
 </body>
 </html>

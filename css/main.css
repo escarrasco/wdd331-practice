@@ -14,6 +14,11 @@
 @import "components/resume.css" layer(components);
 @import "components/contact.css" layer(components);
 @import "components/icons.css" layer(components);
+@import "components/homepage.css" layer(components);
+@import "components/hero.css" layer(components);
+@import "components/about.css" layer(components);
+@import "components/go-back.css" layer(components);
+
 
 @import "utilities/utilities.css" layer(utilities);
 
