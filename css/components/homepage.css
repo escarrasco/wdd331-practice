@@ -47,7 +47,7 @@
 }
 
 /* Hero actions row (sits inside .hero-content) */
-.hero-hp-actions {
+.hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-md);
