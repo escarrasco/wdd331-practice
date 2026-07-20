@@ -39,7 +39,7 @@
 .btn--ghost {
     background-color: transparent;
     border-color: color-mix(in srgb, currentColor 45%, transparent);
-    color: #ffffff;
+    color: inherit;
 }
 
 .btn--ghost:hover {

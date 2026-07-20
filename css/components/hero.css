@@ -74,7 +74,7 @@
 
 .btn--ghost {
     background-color: transparent;
-    color: var(--color-text);
+    color: var(--header-text);
     border-color: var(--color-border-strong);
 }
 
