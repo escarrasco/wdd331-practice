@@ -172,3 +172,14 @@ h2 {
    color-scheme: light   → always light, ignores OS
    color-scheme: dark    → always dark, ignores OS
    color-scheme: light dark → follows OS preference */
+
+.go-back {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-decoration: none;
+  opacity: 0.7;
+}
+.go-back:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

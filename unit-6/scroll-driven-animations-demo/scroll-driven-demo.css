@@ -100,3 +100,21 @@ footer {
     animation-range: entry;
   }
 }
+/* Way back to the portfolio home (added for Portfolio Launch) */
+.go-back {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #f1f5f9;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+}
+.go-back:hover {
+  background: rgba(15, 23, 42, 0.85);
+}
